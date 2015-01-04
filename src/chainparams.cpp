@@ -21,7 +21,7 @@ using namespace boost::assign;
 
 unsigned int pnSeed[] =
 {
-	0x46A83599, 0x48DC48A9, 0x5CDE19F5
+	0x46A83599, 0x48DC48A9, 0x5CDE19F5, 0xCC447A0B
          // networks fixed seed nodes
 };
 
