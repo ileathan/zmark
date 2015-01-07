@@ -64,7 +64,7 @@ public:
         assert(hashGenesisBlock == uint256("0x6be0214f333f8e533c5723ec780cf370718d30326db67ff690a78bbfeba510ea"));
 
         // todo add more dns seeders
-        vSeeds.push_back(CDNSSeedData("zmark.org", "seed.zmark.org"));
+        vSeeds.push_back(CDNSSeedData("seed.zmark.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(143); // z
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
@@ -132,7 +132,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("zmark.co", "test.zmark.co"));
+        vSeeds.push_back(CDNSSeedData("seed.zmark.co"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(130); // u
         base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
