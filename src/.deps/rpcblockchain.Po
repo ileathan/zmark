@@ -1,23 +1,23 @@
 rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
- uint256.h /usr/lib/gcc/i686-linux-gnu/4.8/include/stdint.h \
+ uint256.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h \
  /usr/include/stdint.h /usr/include/features.h \
- /usr/include/i386-linux-gnu/sys/cdefs.h \
- /usr/include/i386-linux-gnu/bits/wordsize.h \
- /usr/include/i386-linux-gnu/gnu/stubs.h \
- /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/include/i386-linux-gnu/bits/wchar.h /usr/include/stdio.h \
- /usr/lib/gcc/i686-linux-gnu/4.8/include/stddef.h \
- /usr/include/i386-linux-gnu/bits/types.h \
- /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.8/include/stdarg.h \
- /usr/include/i386-linux-gnu/bits/stdio_lim.h \
- /usr/include/i386-linux-gnu/bits/sys_errlist.h \
- /usr/include/i386-linux-gnu/bits/stdio.h \
- /usr/include/i386-linux-gnu/bits/stdio2.h /usr/include/c++/4.8/string \
- /usr/include/i386-linux-gnu/c++/4.8/bits/c++config.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/os_defines.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/cpu_defines.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/4.8/string \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/cpu_defines.h \
  /usr/include/c++/4.8/bits/stringfwd.h \
  /usr/include/c++/4.8/bits/memoryfwd.h \
  /usr/include/c++/4.8/bits/char_traits.h \
@@ -34,20 +34,20 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/c++/4.8/debug/debug.h \
  /usr/include/c++/4.8/bits/stl_iterator.h \
  /usr/include/c++/4.8/bits/postypes.h /usr/include/c++/4.8/cwchar \
- /usr/include/xlocale.h /usr/include/i386-linux-gnu/bits/wchar2.h \
+ /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/4.8/bits/allocator.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/c++allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h \
  /usr/include/c++/4.8/ext/new_allocator.h /usr/include/c++/4.8/new \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/4.8/bits/localefwd.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/c++locale.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
- /usr/include/i386-linux-gnu/bits/locale.h /usr/include/c++/4.8/iosfwd \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/iosfwd \
  /usr/include/c++/4.8/cctype /usr/include/ctype.h /usr/include/endian.h \
- /usr/include/i386-linux-gnu/bits/endian.h \
- /usr/include/i386-linux-gnu/bits/byteswap.h \
- /usr/include/i386-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/4.8/bits/ostream_insert.h \
  /usr/include/c++/4.8/bits/cxxabi_forced.h \
  /usr/include/c++/4.8/bits/stl_function.h \
@@ -55,17 +55,17 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
  /usr/include/c++/4.8/ext/atomicity.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/gthr.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/gthr-default.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
- /usr/include/i386-linux-gnu/bits/sched.h \
- /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/bits/timex.h \
- /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
- /usr/include/i386-linux-gnu/bits/setjmp.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/atomic_word.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/atomic_word.h \
  /usr/include/c++/4.8/bits/basic_string.tcc /usr/include/string.h \
- /usr/include/i386-linux-gnu/bits/string3.h /usr/include/c++/4.8/vector \
+ /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/c++/4.8/vector \
  /usr/include/c++/4.8/bits/stl_construct.h \
  /usr/include/c++/4.8/ext/alloc_traits.h \
  /usr/include/c++/4.8/bits/stl_uninitialized.h \
@@ -85,24 +85,24 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/config/no_tr1/utility.hpp \
  /usr/include/c++/4.8/utility /usr/include/c++/4.8/bits/stl_relops.h \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
- /usr/include/i386-linux-gnu/bits/posix_opt.h \
- /usr/include/i386-linux-gnu/bits/environments.h \
- /usr/include/i386-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/i386-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/boost/config/select_platform_config.hpp \
  /usr/include/boost/config/platform/linux.hpp \
  /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
- /usr/include/i386-linux-gnu/bits/waitflags.h \
- /usr/include/i386-linux-gnu/bits/waitstatus.h \
- /usr/include/i386-linux-gnu/sys/types.h \
- /usr/include/i386-linux-gnu/sys/select.h \
- /usr/include/i386-linux-gnu/bits/select.h \
- /usr/include/i386-linux-gnu/bits/sigset.h \
- /usr/include/i386-linux-gnu/bits/select2.h \
- /usr/include/i386-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
- /usr/include/i386-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/i386-linux-gnu/bits/stdlib-float.h \
- /usr/include/i386-linux-gnu/bits/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/boost/config/posix_features.hpp \
  /usr/include/boost/config/suffix.hpp \
  /usr/include/boost/detail/workaround.hpp \
@@ -117,26 +117,27 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/c++/4.8/bits/basic_ios.h \
  /usr/include/c++/4.8/bits/locale_facets.h /usr/include/c++/4.8/cwctype \
  /usr/include/wctype.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/ctype_base.h \
  /usr/include/c++/4.8/bits/streambuf_iterator.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/ctype_inline.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/ctype_inline.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/boost/iostreams/positioning.hpp \
  /usr/include/boost/cstdint.hpp /usr/include/boost/integer_traits.hpp \
  /usr/include/boost/limits.hpp /usr/include/c++/4.8/limits \
- /usr/lib/gcc/i686-linux-gnu/4.8/include-fixed/limits.h \
- /usr/lib/gcc/i686-linux-gnu/4.8/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/i386-linux-gnu/bits/posix1_lim.h \
- /usr/include/i386-linux-gnu/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/i386-linux-gnu/bits/posix2_lim.h \
- /usr/include/i386-linux-gnu/bits/xopen_lim.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/boost/iostreams/detail/config/codecvt.hpp \
  /usr/include/c++/4.8/locale \
  /usr/include/c++/4.8/bits/locale_facets_nonio.h \
  /usr/include/c++/4.8/ctime \
- /usr/include/i386-linux-gnu/c++/4.8/bits/time_members.h \
- /usr/include/i386-linux-gnu/c++/4.8/bits/messages_members.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/4.8/bits/codecvt.h \
  /usr/include/c++/4.8/bits/locale_facets_nonio.tcc \
  /usr/include/boost/iostreams/detail/config/fpos.hpp \
@@ -505,6 +506,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/basic_io_object.hpp \
  /usr/include/boost/asio/io_service.hpp /usr/include/c++/4.8/stdexcept \
  /usr/include/boost/asio/detail/noncopyable.hpp \
+ /usr/include/boost/asio/detail/service_registry_fwd.hpp \
  /usr/include/boost/asio/detail/wrapped_handler.hpp \
  /usr/include/boost/asio/detail/bind_handler.hpp \
  /usr/include/boost/asio/detail/handler_alloc_helpers.hpp \
@@ -526,8 +528,8 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/config/auto_link.hpp /usr/include/boost/operators.hpp \
  /usr/include/boost/noncopyable.hpp /usr/include/c++/4.8/functional \
  /usr/include/boost/cerrno.hpp /usr/include/c++/4.8/cerrno \
- /usr/include/errno.h /usr/include/i386-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/i386-linux-gnu/asm/errno.h \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/boost/config/abi_prefix.hpp \
  /usr/include/boost/config/abi_suffix.hpp \
@@ -535,22 +537,23 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/detail/throw_exception.hpp \
  /usr/include/boost/system/system_error.hpp \
  /usr/include/boost/asio/error.hpp /usr/include/netdb.h \
- /usr/include/netinet/in.h /usr/include/i386-linux-gnu/sys/socket.h \
- /usr/include/i386-linux-gnu/sys/uio.h \
- /usr/include/i386-linux-gnu/bits/uio.h \
- /usr/include/i386-linux-gnu/bits/socket.h \
- /usr/include/i386-linux-gnu/bits/socket_type.h \
- /usr/include/i386-linux-gnu/bits/sockaddr.h \
- /usr/include/i386-linux-gnu/asm/socket.h \
+ /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
  /usr/include/asm-generic/socket.h \
- /usr/include/i386-linux-gnu/asm/sockios.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
- /usr/include/i386-linux-gnu/bits/socket2.h \
- /usr/include/i386-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
- /usr/include/i386-linux-gnu/bits/siginfo.h \
- /usr/include/i386-linux-gnu/bits/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
  /usr/include/boost/asio/impl/error.ipp \
  /usr/include/boost/asio/detail/op_queue.hpp \
+ /usr/include/boost/asio/detail/task_io_service_fwd.hpp \
  /usr/include/boost/asio/detail/thread_info_base.hpp \
  /usr/include/c++/4.8/climits \
  /usr/include/boost/asio/detail/handler_cont_helpers.hpp \
@@ -573,6 +576,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/smart_ptr/detail/sp_has_sync.hpp \
  /usr/include/boost/smart_ptr/detail/atomic_count_gcc_x86.hpp \
  /usr/include/boost/asio/detail/reactor_fwd.hpp \
+ /usr/include/boost/asio/detail/epoll_reactor_fwd.hpp \
  /usr/include/boost/asio/detail/task_io_service_operation.hpp \
  /usr/include/boost/asio/detail/handler_tracking.hpp \
  /usr/include/boost/asio/detail/impl/handler_tracking.ipp \
@@ -590,37 +594,39 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/detail/select_interrupter.hpp \
  /usr/include/boost/asio/detail/eventfd_select_interrupter.hpp \
  /usr/include/boost/asio/detail/impl/eventfd_select_interrupter.ipp \
- /usr/include/i386-linux-gnu/sys/stat.h \
- /usr/include/i386-linux-gnu/bits/stat.h /usr/include/fcntl.h \
- /usr/include/i386-linux-gnu/bits/fcntl.h \
- /usr/include/i386-linux-gnu/bits/fcntl-linux.h \
- /usr/include/i386-linux-gnu/bits/fcntl2.h \
- /usr/include/i386-linux-gnu/sys/eventfd.h \
- /usr/include/i386-linux-gnu/bits/eventfd.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
+ /usr/include/x86_64-linux-gnu/sys/eventfd.h \
+ /usr/include/x86_64-linux-gnu/bits/eventfd.h \
  /usr/include/boost/asio/detail/cstdint.hpp \
  /usr/include/boost/asio/detail/socket_types.hpp \
- /usr/include/i386-linux-gnu/sys/ioctl.h \
- /usr/include/i386-linux-gnu/bits/ioctls.h \
- /usr/include/i386-linux-gnu/asm/ioctls.h \
+ /usr/include/x86_64-linux-gnu/sys/ioctl.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctls.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctls.h \
  /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
- /usr/include/i386-linux-gnu/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
- /usr/include/i386-linux-gnu/bits/ioctl-types.h \
- /usr/include/i386-linux-gnu/sys/ttydefaults.h \
- /usr/include/i386-linux-gnu/sys/poll.h \
- /usr/include/i386-linux-gnu/bits/poll.h \
- /usr/include/i386-linux-gnu/bits/poll2.h \
- /usr/include/i386-linux-gnu/sys/un.h /usr/include/netinet/tcp.h \
+ /usr/include/x86_64-linux-gnu/asm/ioctl.h \
+ /usr/include/asm-generic/ioctl.h \
+ /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+ /usr/include/x86_64-linux-gnu/sys/poll.h \
+ /usr/include/x86_64-linux-gnu/bits/poll.h \
+ /usr/include/x86_64-linux-gnu/bits/poll2.h \
+ /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/netinet/tcp.h \
  /usr/include/arpa/inet.h /usr/include/net/if.h \
  /usr/include/boost/asio/detail/timer_queue_base.hpp \
+ /usr/include/boost/asio/detail/timer_queue_fwd.hpp \
  /usr/include/boost/asio/detail/timer_queue_set.hpp \
  /usr/include/boost/asio/detail/impl/timer_queue_set.ipp \
  /usr/include/boost/asio/detail/wait_op.hpp \
  /usr/include/boost/asio/detail/impl/epoll_reactor.hpp \
  /usr/include/boost/asio/detail/impl/epoll_reactor.ipp \
- /usr/include/i386-linux-gnu/sys/epoll.h \
- /usr/include/i386-linux-gnu/bits/epoll.h \
- /usr/include/i386-linux-gnu/sys/timerfd.h \
- /usr/include/i386-linux-gnu/bits/timerfd.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h \
+ /usr/include/x86_64-linux-gnu/sys/timerfd.h \
+ /usr/include/x86_64-linux-gnu/bits/timerfd.h \
  /usr/include/boost/asio/impl/io_service.ipp \
  /usr/include/boost/asio/detail/scoped_ptr.hpp \
  /usr/include/boost/asio/detail/type_traits.hpp \
@@ -632,7 +638,6 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/buffer.hpp /usr/include/c++/4.8/cstring \
  /usr/include/boost/asio/detail/array_fwd.hpp \
  /usr/include/boost/asio/detail/buffer_sequence_adapter.hpp \
- /usr/include/boost/asio/detail/impl/buffer_sequence_adapter.ipp \
  /usr/include/boost/asio/detail/reactive_null_buffers_op.hpp \
  /usr/include/boost/asio/detail/reactive_socket_accept_op.hpp \
  /usr/include/boost/asio/detail/socket_holder.hpp \
@@ -682,21 +687,21 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/date_time/c_time.hpp \
  /usr/include/boost/date_time/compiler_config.hpp \
  /usr/include/boost/date_time/locale_config.hpp \
- /usr/include/i386-linux-gnu/sys/time.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
  /usr/include/boost/date_time/microsec_time_clock.hpp \
  /usr/include/boost/date_time/filetime_functions.hpp \
  /usr/include/boost/date_time/posix_time/ptime.hpp \
  /usr/include/boost/date_time/posix_time/posix_time_system.hpp \
  /usr/include/boost/date_time/posix_time/posix_time_config.hpp \
  /usr/include/boost/config/no_tr1/cmath.hpp /usr/include/c++/4.8/cmath \
- /usr/include/math.h /usr/include/i386-linux-gnu/bits/huge_val.h \
- /usr/include/i386-linux-gnu/bits/huge_valf.h \
- /usr/include/i386-linux-gnu/bits/huge_vall.h \
- /usr/include/i386-linux-gnu/bits/inf.h \
- /usr/include/i386-linux-gnu/bits/nan.h \
- /usr/include/i386-linux-gnu/bits/mathdef.h \
- /usr/include/i386-linux-gnu/bits/mathcalls.h \
- /usr/include/i386-linux-gnu/bits/mathinline.h \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+ /usr/include/x86_64-linux-gnu/bits/inf.h \
+ /usr/include/x86_64-linux-gnu/bits/nan.h \
+ /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
  /usr/include/boost/date_time/time_duration.hpp \
  /usr/include/boost/date_time/time_defs.hpp \
  /usr/include/boost/date_time/special_defs.hpp \
@@ -745,7 +750,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/seq_packet_socket_service.hpp \
  /usr/include/boost/asio/basic_serial_port.hpp \
  /usr/include/boost/asio/serial_port_base.hpp /usr/include/termios.h \
- /usr/include/i386-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios.h \
  /usr/include/boost/asio/impl/serial_port_base.hpp \
  /usr/include/boost/asio/impl/serial_port_base.ipp \
  /usr/include/boost/asio/serial_port_service.hpp \
@@ -761,12 +766,12 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/basic_signal_set.hpp \
  /usr/include/boost/asio/signal_set_service.hpp \
  /usr/include/boost/asio/detail/signal_set_service.hpp \
- /usr/include/signal.h /usr/include/i386-linux-gnu/bits/signum.h \
- /usr/include/i386-linux-gnu/bits/sigaction.h \
- /usr/include/i386-linux-gnu/bits/sigcontext.h \
- /usr/include/i386-linux-gnu/bits/sigstack.h \
- /usr/include/i386-linux-gnu/sys/ucontext.h \
- /usr/include/i386-linux-gnu/bits/sigthread.h \
+ /usr/include/signal.h /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/boost/asio/detail/signal_handler.hpp \
  /usr/include/boost/asio/detail/signal_op.hpp \
  /usr/include/boost/asio/detail/impl/signal_set_service.ipp \
@@ -785,7 +790,6 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/functional/hash/hash_fwd.hpp \
  /usr/include/boost/asio/stream_socket_service.hpp \
  /usr/include/boost/asio/deadline_timer.hpp \
- /usr/include/boost/asio/detail/variadic_templates.hpp \
  /usr/include/boost/asio/basic_stream_socket.hpp \
  /usr/include/boost/asio/basic_streambuf.hpp \
  /usr/include/boost/asio/basic_streambuf_fwd.hpp \
@@ -797,7 +801,6 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/buffered_read_stream.hpp \
  /usr/include/boost/asio/detail/buffer_resize_guard.hpp \
  /usr/include/boost/asio/detail/buffered_stream_storage.hpp \
- /usr/include/boost/asio/impl/buffered_read_stream.hpp \
  /usr/include/boost/asio/buffered_stream_fwd.hpp \
  /usr/include/boost/asio/buffered_stream.hpp \
  /usr/include/boost/asio/buffered_write_stream.hpp \
@@ -807,7 +810,6 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/detail/base_from_completion_cond.hpp \
  /usr/include/boost/asio/detail/consuming_buffers.hpp \
  /usr/include/boost/asio/detail/dependent_type.hpp \
- /usr/include/boost/asio/impl/buffered_write_stream.hpp \
  /usr/include/boost/asio/buffers_iterator.hpp \
  /usr/include/boost/asio/connect.hpp \
  /usr/include/boost/asio/impl/connect.hpp \
@@ -909,7 +911,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/asio/ssl/detail/openssl_types.hpp \
  /usr/include/openssl/conf.h /usr/include/openssl/bio.h \
  /usr/include/openssl/e_os2.h \
- /usr/include/i386-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/crypto.h /usr/include/openssl/stack.h \
  /usr/include/openssl/safestack.h /usr/include/openssl/opensslv.h \
  /usr/include/openssl/ossl_typ.h /usr/include/openssl/symhacks.h \
@@ -977,21 +979,6 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/type_traits/has_trivial_copy.hpp \
  /usr/include/boost/variant/recursive_wrapper_fwd.hpp \
  /usr/include/boost/variant/detail/move.hpp \
- /usr/include/boost/move/move.hpp \
- /usr/include/boost/move/detail/config_begin.hpp \
- /usr/include/boost/move/utility.hpp /usr/include/boost/move/core.hpp \
- /usr/include/boost/move/detail/meta_utils.hpp \
- /usr/include/boost/move/detail/config_end.hpp \
- /usr/include/boost/move/iterator.hpp /usr/include/boost/move/traits.hpp \
- /usr/include/boost/type_traits/has_trivial_destructor.hpp \
- /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp \
- /usr/include/boost/type_traits/has_trivial_move_constructor.hpp \
- /usr/include/boost/type_traits/is_nothrow_move_assignable.hpp \
- /usr/include/boost/type_traits/has_trivial_move_assign.hpp \
- /usr/include/boost/type_traits/has_nothrow_assign.hpp \
- /usr/include/boost/type_traits/has_trivial_assign.hpp \
- /usr/include/boost/move/algorithm.hpp \
- /usr/include/boost/detail/no_exceptions_support.hpp \
  /usr/include/boost/mpl/iter_fold.hpp \
  /usr/include/boost/mpl/begin_end.hpp \
  /usr/include/boost/mpl/begin_end_fwd.hpp \
@@ -1046,6 +1033,8 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/variant/detail/over_sequence.hpp \
  /usr/include/boost/variant/detail/visitation_impl.hpp \
  /usr/include/boost/variant/detail/cast_storage.hpp \
+ /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp \
+ /usr/include/boost/type_traits/has_trivial_move_constructor.hpp \
  /usr/include/boost/variant/detail/hash_variant.hpp \
  /usr/include/boost/variant/static_visitor.hpp \
  /usr/include/boost/variant/apply_visitor.hpp \
@@ -1057,6 +1046,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/type_traits/is_empty.hpp \
  /usr/include/boost/type_traits/is_stateless.hpp \
  /usr/include/boost/type_traits/has_trivial_constructor.hpp \
+ /usr/include/boost/type_traits/has_trivial_destructor.hpp \
  /usr/include/boost/math/common_factor_ct.hpp \
  /usr/include/boost/math_fwd.hpp \
  /usr/include/boost/type_traits/has_nothrow_constructor.hpp \
@@ -1142,6 +1132,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/function/detail/function_iterate.hpp \
  /usr/include/boost/function/detail/maybe_include.hpp \
  /usr/include/boost/function/function_template.hpp \
+ /usr/include/boost/detail/no_exceptions_support.hpp \
  /usr/include/boost/spirit/include/classic_core.hpp \
  /usr/include/boost/spirit/home/classic/core.hpp \
  /usr/include/boost/spirit/home/classic/version.hpp \
@@ -1203,6 +1194,12 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/type_traits/decay.hpp \
  /usr/include/boost/type_traits/remove_bounds.hpp \
  /usr/include/boost/thread/detail/delete.hpp \
+ /usr/include/boost/move/utility.hpp \
+ /usr/include/boost/move/detail/config_begin.hpp \
+ /usr/include/boost/move/core.hpp \
+ /usr/include/boost/move/detail/meta_utils.hpp \
+ /usr/include/boost/move/detail/config_end.hpp \
+ /usr/include/boost/move/traits.hpp \
  /usr/include/boost/thread/lock_options.hpp \
  /usr/include/boost/thread/lockable_traits.hpp \
  /usr/include/boost/thread/thread_time.hpp \
@@ -1239,10 +1236,9 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/atomic.hpp /usr/include/boost/atomic/atomic.hpp \
  /usr/include/boost/atomic/detail/config.hpp \
  /usr/include/boost/atomic/detail/platform.hpp \
- /usr/include/boost/atomic/detail/gcc-atomic.hpp \
+ /usr/include/boost/atomic/detail/gcc-x86.hpp \
  /usr/include/boost/atomic/detail/base.hpp \
  /usr/include/boost/atomic/detail/lockpool.hpp \
- /usr/include/boost/atomic/detail/link.hpp \
  /usr/include/boost/atomic/detail/type-classification.hpp \
  /usr/include/boost/spirit/home/classic/core/non_terminal/impl/static.hpp \
  /usr/include/boost/thread/tss.hpp \
@@ -1303,8 +1299,8 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/spirit/home/classic/iterator/position_iterator_fwd.hpp \
  /usr/include/boost/spirit/home/classic/iterator/impl/position_iterator.ipp \
  json/json_spirit_utils.h json/json_spirit_writer_template.h \
- /usr/include/c++/4.8/iomanip main.h zmark-config.h bignum.h \
- serialize.h allocators.h /usr/include/c++/4.8/set \
+ /usr/include/c++/4.8/iomanip main.h zmark-config.h bignum.h serialize.h \
+ allocators.h /usr/include/c++/4.8/set \
  /usr/include/c++/4.8/bits/stl_set.h \
  /usr/include/c++/4.8/bits/stl_multiset.h \
  /usr/include/boost/tuple/tuple.hpp \
@@ -1316,12 +1312,12 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/type_traits/is_fundamental.hpp version.h \
  clientversion.h chainparams.h coins.h core.h script.h key.h hash.h \
  /usr/include/openssl/ripemd.h util.h compat.h \
- /usr/include/i386-linux-gnu/sys/fcntl.h \
- /usr/include/i386-linux-gnu/sys/mman.h \
- /usr/include/i386-linux-gnu/bits/mman.h \
- /usr/include/i386-linux-gnu/bits/mman-linux.h /usr/include/ifaddrs.h \
- tinyformat.h /usr/include/i386-linux-gnu/sys/resource.h \
- /usr/include/i386-linux-gnu/bits/resource.h \
+ /usr/include/x86_64-linux-gnu/sys/fcntl.h \
+ /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h /usr/include/ifaddrs.h \
+ tinyformat.h /usr/include/x86_64-linux-gnu/sys/resource.h \
+ /usr/include/x86_64-linux-gnu/bits/resource.h \
  /usr/include/boost/filesystem/path.hpp \
  /usr/include/boost/filesystem/config.hpp \
  /usr/include/boost/filesystem/path_traits.hpp \
@@ -1371,6 +1367,29 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/exception/detail/is_output_streamable.hpp \
  /usr/include/boost/exception/detail/object_hex_dump.hpp \
  /usr/include/boost/exception/detail/type_info.hpp \
+ /usr/include/boost/units/detail/utility.hpp \
+ /usr/include/c++/4.8/cxxabi.h \
+ /usr/include/x86_64-linux-gnu/c++/4.8/bits/cxxabi_tweaks.h \
+ /usr/include/boost/algorithm/string/replace.hpp \
+ /usr/include/boost/algorithm/string/config.hpp \
+ /usr/include/boost/algorithm/string/find_format.hpp \
+ /usr/include/boost/range/as_literal.hpp \
+ /usr/include/boost/range/detail/str_types.hpp \
+ /usr/include/boost/algorithm/string/concept.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format_store.hpp \
+ /usr/include/boost/algorithm/string/detail/replace_storage.hpp \
+ /usr/include/boost/algorithm/string/sequence_traits.hpp \
+ /usr/include/boost/algorithm/string/yes_no_type.hpp \
+ /usr/include/boost/algorithm/string/detail/sequence.hpp \
+ /usr/include/boost/algorithm/string/detail/find_format_all.hpp \
+ /usr/include/boost/algorithm/string/finder.hpp \
+ /usr/include/boost/algorithm/string/constants.hpp \
+ /usr/include/boost/algorithm/string/detail/finder.hpp \
+ /usr/include/boost/algorithm/string/compare.hpp \
+ /usr/include/boost/algorithm/string/formatter.hpp \
+ /usr/include/boost/algorithm/string/detail/formatter.hpp \
+ /usr/include/boost/algorithm/string/detail/util.hpp \
  /usr/include/boost/exception/detail/error_info_impl.hpp \
  /usr/include/boost/exception/diagnostic_information.hpp \
  /usr/include/boost/exception/get_error_info.hpp \
@@ -1393,7 +1412,7 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/signals2/signal_base.hpp \
  /usr/include/boost/signals2/detail/signals_common_macros.hpp \
  /usr/include/boost/signals2/detail/tracked_objects_visitor.hpp \
- /usr/include/boost/signals2/slot_base.hpp \
+ /usr/include/boost/signals2/slot_base.hpp /usr/include/boost/any.hpp \
  /usr/include/boost/signals2/detail/foreign_ptr.hpp \
  /usr/include/boost/signals2/expired_slot.hpp \
  /usr/include/boost/signals2/trackable.hpp \
@@ -1416,6 +1435,8 @@ rpcblockchain.o: rpcblockchain.cpp /usr/include/stdc-predef.h rpcserver.h \
  /usr/include/boost/signals2/detail/slot_call_iterator.hpp \
  /usr/include/boost/signals2/detail/auto_buffer.hpp \
  /usr/include/boost/multi_index/detail/scope_guard.hpp \
+ /usr/include/boost/type_traits/has_nothrow_assign.hpp \
+ /usr/include/boost/type_traits/has_trivial_assign.hpp \
  /usr/include/boost/signals2/optional_last_value.hpp \
  /usr/include/boost/signals2/mutex.hpp \
  /usr/include/boost/signals2/detail/lwm_pthreads.hpp \
@@ -1438,29 +1459,29 @@ rpcserver.h:
 
 uint256.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.8/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h:
 
 /usr/include/stdint.h:
 
 /usr/include/features.h:
 
-/usr/include/i386-linux-gnu/sys/cdefs.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/include/i386-linux-gnu/bits/wordsize.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/i386-linux-gnu/gnu/stubs-32.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/include/i386-linux-gnu/bits/wchar.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/stdio.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.8/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
 
-/usr/include/i386-linux-gnu/bits/types.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/i386-linux-gnu/bits/typesizes.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/libio.h:
 
@@ -1468,23 +1489,23 @@ uint256.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.8/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
 
-/usr/include/i386-linux-gnu/bits/stdio_lim.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/usr/include/i386-linux-gnu/bits/sys_errlist.h:
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
-/usr/include/i386-linux-gnu/bits/stdio.h:
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/i386-linux-gnu/bits/stdio2.h:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/include/c++/4.8/string:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/c++config.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/os_defines.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/cpu_defines.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/cpu_defines.h:
 
 /usr/include/c++/4.8/bits/stringfwd.h:
 
@@ -1524,11 +1545,11 @@ uint256.h:
 
 /usr/include/xlocale.h:
 
-/usr/include/i386-linux-gnu/bits/wchar2.h:
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/c++/4.8/bits/allocator.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/c++allocator.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h:
 
 /usr/include/c++/4.8/ext/new_allocator.h:
 
@@ -1540,13 +1561,13 @@ uint256.h:
 
 /usr/include/c++/4.8/bits/localefwd.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/c++locale.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h:
 
 /usr/include/c++/4.8/clocale:
 
 /usr/include/locale.h:
 
-/usr/include/i386-linux-gnu/bits/locale.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/4.8/iosfwd:
 
@@ -1556,11 +1577,11 @@ uint256.h:
 
 /usr/include/endian.h:
 
-/usr/include/i386-linux-gnu/bits/endian.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/i386-linux-gnu/bits/byteswap.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/i386-linux-gnu/bits/byteswap-16.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
 
 /usr/include/c++/4.8/bits/ostream_insert.h:
 
@@ -1576,9 +1597,9 @@ uint256.h:
 
 /usr/include/c++/4.8/ext/atomicity.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/gthr.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/gthr-default.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/gthr-default.h:
 
 /usr/include/pthread.h:
 
@@ -1586,23 +1607,23 @@ uint256.h:
 
 /usr/include/time.h:
 
-/usr/include/i386-linux-gnu/bits/sched.h:
+/usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/i386-linux-gnu/bits/time.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/i386-linux-gnu/bits/timex.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/include/i386-linux-gnu/bits/pthreadtypes.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/usr/include/i386-linux-gnu/bits/setjmp.h:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/atomic_word.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/atomic_word.h:
 
 /usr/include/c++/4.8/bits/basic_string.tcc:
 
 /usr/include/string.h:
 
-/usr/include/i386-linux-gnu/bits/string3.h:
+/usr/include/x86_64-linux-gnu/bits/string3.h:
 
 /usr/include/c++/4.8/vector:
 
@@ -1658,15 +1679,15 @@ rpcprotocol.h:
 
 /usr/include/unistd.h:
 
-/usr/include/i386-linux-gnu/bits/posix_opt.h:
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/include/i386-linux-gnu/bits/environments.h:
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
-/usr/include/i386-linux-gnu/bits/confname.h:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/getopt.h:
 
-/usr/include/i386-linux-gnu/bits/unistd.h:
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/boost/config/select_platform_config.hpp:
 
@@ -1676,29 +1697,29 @@ rpcprotocol.h:
 
 /usr/include/stdlib.h:
 
-/usr/include/i386-linux-gnu/bits/waitflags.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/i386-linux-gnu/bits/waitstatus.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/i386-linux-gnu/sys/types.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/usr/include/i386-linux-gnu/sys/select.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/i386-linux-gnu/bits/select.h:
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/i386-linux-gnu/bits/sigset.h:
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
 
-/usr/include/i386-linux-gnu/bits/select2.h:
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/usr/include/i386-linux-gnu/sys/sysmacros.h:
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/alloca.h:
 
-/usr/include/i386-linux-gnu/bits/stdlib-bsearch.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/usr/include/i386-linux-gnu/bits/stdlib-float.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/i386-linux-gnu/bits/stdlib.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/boost/config/posix_features.hpp:
 
@@ -1734,11 +1755,11 @@ rpcprotocol.h:
 
 /usr/include/wctype.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/ctype_base.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/ctype_base.h:
 
 /usr/include/c++/4.8/bits/streambuf_iterator.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/ctype_inline.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/ctype_inline.h:
 
 /usr/include/c++/4.8/bits/locale_facets.tcc:
 
@@ -1754,21 +1775,21 @@ rpcprotocol.h:
 
 /usr/include/c++/4.8/limits:
 
-/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed/limits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.8/include-fixed/syslimits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
-/usr/include/i386-linux-gnu/bits/posix1_lim.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/usr/include/i386-linux-gnu/bits/local_lim.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/linux/limits.h:
 
-/usr/include/i386-linux-gnu/bits/posix2_lim.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/i386-linux-gnu/bits/xopen_lim.h:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/boost/iostreams/detail/config/codecvt.hpp:
 
@@ -1778,9 +1799,9 @@ rpcprotocol.h:
 
 /usr/include/c++/4.8/ctime:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/time_members.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/time_members.h:
 
-/usr/include/i386-linux-gnu/c++/4.8/bits/messages_members.h:
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/messages_members.h:
 
 /usr/include/libintl.h:
 
@@ -2572,6 +2593,8 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/detail/noncopyable.hpp:
 
+/usr/include/boost/asio/detail/service_registry_fwd.hpp:
+
 /usr/include/boost/asio/detail/wrapped_handler.hpp:
 
 /usr/include/boost/asio/detail/bind_handler.hpp:
@@ -2622,11 +2645,11 @@ rpcprotocol.h:
 
 /usr/include/errno.h:
 
-/usr/include/i386-linux-gnu/bits/errno.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/linux/errno.h:
 
-/usr/include/i386-linux-gnu/asm/errno.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -2648,39 +2671,41 @@ rpcprotocol.h:
 
 /usr/include/netinet/in.h:
 
-/usr/include/i386-linux-gnu/sys/socket.h:
+/usr/include/x86_64-linux-gnu/sys/socket.h:
 
-/usr/include/i386-linux-gnu/sys/uio.h:
+/usr/include/x86_64-linux-gnu/sys/uio.h:
 
-/usr/include/i386-linux-gnu/bits/uio.h:
+/usr/include/x86_64-linux-gnu/bits/uio.h:
 
-/usr/include/i386-linux-gnu/bits/socket.h:
+/usr/include/x86_64-linux-gnu/bits/socket.h:
 
-/usr/include/i386-linux-gnu/bits/socket_type.h:
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
 
-/usr/include/i386-linux-gnu/bits/sockaddr.h:
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
-/usr/include/i386-linux-gnu/asm/socket.h:
+/usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/asm-generic/socket.h:
 
-/usr/include/i386-linux-gnu/asm/sockios.h:
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
 
 /usr/include/asm-generic/sockios.h:
 
-/usr/include/i386-linux-gnu/bits/socket2.h:
+/usr/include/x86_64-linux-gnu/bits/socket2.h:
 
-/usr/include/i386-linux-gnu/bits/in.h:
+/usr/include/x86_64-linux-gnu/bits/in.h:
 
 /usr/include/rpc/netdb.h:
 
-/usr/include/i386-linux-gnu/bits/siginfo.h:
+/usr/include/x86_64-linux-gnu/bits/siginfo.h:
 
-/usr/include/i386-linux-gnu/bits/netdb.h:
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
 
 /usr/include/boost/asio/impl/error.ipp:
 
 /usr/include/boost/asio/detail/op_queue.hpp:
+
+/usr/include/boost/asio/detail/task_io_service_fwd.hpp:
 
 /usr/include/boost/asio/detail/thread_info_base.hpp:
 
@@ -2726,6 +2751,8 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/detail/reactor_fwd.hpp:
 
+/usr/include/boost/asio/detail/epoll_reactor_fwd.hpp:
+
 /usr/include/boost/asio/detail/task_io_service_operation.hpp:
 
 /usr/include/boost/asio/detail/handler_tracking.hpp:
@@ -2760,51 +2787,51 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/detail/impl/eventfd_select_interrupter.ipp:
 
-/usr/include/i386-linux-gnu/sys/stat.h:
+/usr/include/x86_64-linux-gnu/sys/stat.h:
 
-/usr/include/i386-linux-gnu/bits/stat.h:
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/fcntl.h:
 
-/usr/include/i386-linux-gnu/bits/fcntl.h:
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
-/usr/include/i386-linux-gnu/bits/fcntl-linux.h:
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
-/usr/include/i386-linux-gnu/bits/fcntl2.h:
+/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
 
-/usr/include/i386-linux-gnu/sys/eventfd.h:
+/usr/include/x86_64-linux-gnu/sys/eventfd.h:
 
-/usr/include/i386-linux-gnu/bits/eventfd.h:
+/usr/include/x86_64-linux-gnu/bits/eventfd.h:
 
 /usr/include/boost/asio/detail/cstdint.hpp:
 
 /usr/include/boost/asio/detail/socket_types.hpp:
 
-/usr/include/i386-linux-gnu/sys/ioctl.h:
+/usr/include/x86_64-linux-gnu/sys/ioctl.h:
 
-/usr/include/i386-linux-gnu/bits/ioctls.h:
+/usr/include/x86_64-linux-gnu/bits/ioctls.h:
 
-/usr/include/i386-linux-gnu/asm/ioctls.h:
+/usr/include/x86_64-linux-gnu/asm/ioctls.h:
 
 /usr/include/asm-generic/ioctls.h:
 
 /usr/include/linux/ioctl.h:
 
-/usr/include/i386-linux-gnu/asm/ioctl.h:
+/usr/include/x86_64-linux-gnu/asm/ioctl.h:
 
 /usr/include/asm-generic/ioctl.h:
 
-/usr/include/i386-linux-gnu/bits/ioctl-types.h:
+/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
 
-/usr/include/i386-linux-gnu/sys/ttydefaults.h:
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
 
-/usr/include/i386-linux-gnu/sys/poll.h:
+/usr/include/x86_64-linux-gnu/sys/poll.h:
 
-/usr/include/i386-linux-gnu/bits/poll.h:
+/usr/include/x86_64-linux-gnu/bits/poll.h:
 
-/usr/include/i386-linux-gnu/bits/poll2.h:
+/usr/include/x86_64-linux-gnu/bits/poll2.h:
 
-/usr/include/i386-linux-gnu/sys/un.h:
+/usr/include/x86_64-linux-gnu/sys/un.h:
 
 /usr/include/netinet/tcp.h:
 
@@ -2813,6 +2840,8 @@ rpcprotocol.h:
 /usr/include/net/if.h:
 
 /usr/include/boost/asio/detail/timer_queue_base.hpp:
+
+/usr/include/boost/asio/detail/timer_queue_fwd.hpp:
 
 /usr/include/boost/asio/detail/timer_queue_set.hpp:
 
@@ -2824,13 +2853,13 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/detail/impl/epoll_reactor.ipp:
 
-/usr/include/i386-linux-gnu/sys/epoll.h:
+/usr/include/x86_64-linux-gnu/sys/epoll.h:
 
-/usr/include/i386-linux-gnu/bits/epoll.h:
+/usr/include/x86_64-linux-gnu/bits/epoll.h:
 
-/usr/include/i386-linux-gnu/sys/timerfd.h:
+/usr/include/x86_64-linux-gnu/sys/timerfd.h:
 
-/usr/include/i386-linux-gnu/bits/timerfd.h:
+/usr/include/x86_64-linux-gnu/bits/timerfd.h:
 
 /usr/include/boost/asio/impl/io_service.ipp:
 
@@ -2855,8 +2884,6 @@ rpcprotocol.h:
 /usr/include/boost/asio/detail/array_fwd.hpp:
 
 /usr/include/boost/asio/detail/buffer_sequence_adapter.hpp:
-
-/usr/include/boost/asio/detail/impl/buffer_sequence_adapter.ipp:
 
 /usr/include/boost/asio/detail/reactive_null_buffers_op.hpp:
 
@@ -2956,7 +2983,7 @@ rpcprotocol.h:
 
 /usr/include/boost/date_time/locale_config.hpp:
 
-/usr/include/i386-linux-gnu/sys/time.h:
+/usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/boost/date_time/microsec_time_clock.hpp:
 
@@ -2974,21 +3001,21 @@ rpcprotocol.h:
 
 /usr/include/math.h:
 
-/usr/include/i386-linux-gnu/bits/huge_val.h:
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:
 
-/usr/include/i386-linux-gnu/bits/huge_valf.h:
+/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
 
-/usr/include/i386-linux-gnu/bits/huge_vall.h:
+/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
 
-/usr/include/i386-linux-gnu/bits/inf.h:
+/usr/include/x86_64-linux-gnu/bits/inf.h:
 
-/usr/include/i386-linux-gnu/bits/nan.h:
+/usr/include/x86_64-linux-gnu/bits/nan.h:
 
-/usr/include/i386-linux-gnu/bits/mathdef.h:
+/usr/include/x86_64-linux-gnu/bits/mathdef.h:
 
-/usr/include/i386-linux-gnu/bits/mathcalls.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/usr/include/i386-linux-gnu/bits/mathinline.h:
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
 /usr/include/boost/date_time/time_duration.hpp:
 
@@ -3090,7 +3117,7 @@ rpcprotocol.h:
 
 /usr/include/termios.h:
 
-/usr/include/i386-linux-gnu/bits/termios.h:
+/usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/boost/asio/impl/serial_port_base.hpp:
 
@@ -3124,17 +3151,17 @@ rpcprotocol.h:
 
 /usr/include/signal.h:
 
-/usr/include/i386-linux-gnu/bits/signum.h:
+/usr/include/x86_64-linux-gnu/bits/signum.h:
 
-/usr/include/i386-linux-gnu/bits/sigaction.h:
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
-/usr/include/i386-linux-gnu/bits/sigcontext.h:
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
-/usr/include/i386-linux-gnu/bits/sigstack.h:
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
-/usr/include/i386-linux-gnu/sys/ucontext.h:
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
-/usr/include/i386-linux-gnu/bits/sigthread.h:
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
 /usr/include/boost/asio/detail/signal_handler.hpp:
 
@@ -3176,8 +3203,6 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/deadline_timer.hpp:
 
-/usr/include/boost/asio/detail/variadic_templates.hpp:
-
 /usr/include/boost/asio/basic_stream_socket.hpp:
 
 /usr/include/boost/asio/basic_streambuf.hpp:
@@ -3200,8 +3225,6 @@ rpcprotocol.h:
 
 /usr/include/boost/asio/detail/buffered_stream_storage.hpp:
 
-/usr/include/boost/asio/impl/buffered_read_stream.hpp:
-
 /usr/include/boost/asio/buffered_stream_fwd.hpp:
 
 /usr/include/boost/asio/buffered_stream.hpp:
@@ -3221,8 +3244,6 @@ rpcprotocol.h:
 /usr/include/boost/asio/detail/consuming_buffers.hpp:
 
 /usr/include/boost/asio/detail/dependent_type.hpp:
-
-/usr/include/boost/asio/impl/buffered_write_stream.hpp:
 
 /usr/include/boost/asio/buffers_iterator.hpp:
 
@@ -3436,7 +3457,7 @@ rpcprotocol.h:
 
 /usr/include/openssl/e_os2.h:
 
-/usr/include/i386-linux-gnu/openssl/opensslconf.h:
+/usr/include/x86_64-linux-gnu/openssl/opensslconf.h:
 
 /usr/include/openssl/crypto.h:
 
@@ -3616,40 +3637,6 @@ json/json_spirit_value.h:
 
 /usr/include/boost/variant/detail/move.hpp:
 
-/usr/include/boost/move/move.hpp:
-
-/usr/include/boost/move/detail/config_begin.hpp:
-
-/usr/include/boost/move/utility.hpp:
-
-/usr/include/boost/move/core.hpp:
-
-/usr/include/boost/move/detail/meta_utils.hpp:
-
-/usr/include/boost/move/detail/config_end.hpp:
-
-/usr/include/boost/move/iterator.hpp:
-
-/usr/include/boost/move/traits.hpp:
-
-/usr/include/boost/type_traits/has_trivial_destructor.hpp:
-
-/usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
-
-/usr/include/boost/type_traits/has_trivial_move_constructor.hpp:
-
-/usr/include/boost/type_traits/is_nothrow_move_assignable.hpp:
-
-/usr/include/boost/type_traits/has_trivial_move_assign.hpp:
-
-/usr/include/boost/type_traits/has_nothrow_assign.hpp:
-
-/usr/include/boost/type_traits/has_trivial_assign.hpp:
-
-/usr/include/boost/move/algorithm.hpp:
-
-/usr/include/boost/detail/no_exceptions_support.hpp:
-
 /usr/include/boost/mpl/iter_fold.hpp:
 
 /usr/include/boost/mpl/begin_end.hpp:
@@ -3762,6 +3749,10 @@ json/json_spirit_value.h:
 
 /usr/include/boost/variant/detail/cast_storage.hpp:
 
+/usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
+
+/usr/include/boost/type_traits/has_trivial_move_constructor.hpp:
+
 /usr/include/boost/variant/detail/hash_variant.hpp:
 
 /usr/include/boost/variant/static_visitor.hpp:
@@ -3783,6 +3774,8 @@ json/json_spirit_value.h:
 /usr/include/boost/type_traits/is_stateless.hpp:
 
 /usr/include/boost/type_traits/has_trivial_constructor.hpp:
+
+/usr/include/boost/type_traits/has_trivial_destructor.hpp:
 
 /usr/include/boost/math/common_factor_ct.hpp:
 
@@ -3978,6 +3971,8 @@ json/json_spirit_error_position.h:
 
 /usr/include/boost/function/function_template.hpp:
 
+/usr/include/boost/detail/no_exceptions_support.hpp:
+
 /usr/include/boost/spirit/include/classic_core.hpp:
 
 /usr/include/boost/spirit/home/classic/core.hpp:
@@ -4104,6 +4099,18 @@ json/json_spirit_error_position.h:
 
 /usr/include/boost/thread/detail/delete.hpp:
 
+/usr/include/boost/move/utility.hpp:
+
+/usr/include/boost/move/detail/config_begin.hpp:
+
+/usr/include/boost/move/core.hpp:
+
+/usr/include/boost/move/detail/meta_utils.hpp:
+
+/usr/include/boost/move/detail/config_end.hpp:
+
+/usr/include/boost/move/traits.hpp:
+
 /usr/include/boost/thread/lock_options.hpp:
 
 /usr/include/boost/thread/lockable_traits.hpp:
@@ -4182,13 +4189,11 @@ json/json_spirit_error_position.h:
 
 /usr/include/boost/atomic/detail/platform.hpp:
 
-/usr/include/boost/atomic/detail/gcc-atomic.hpp:
+/usr/include/boost/atomic/detail/gcc-x86.hpp:
 
 /usr/include/boost/atomic/detail/base.hpp:
 
 /usr/include/boost/atomic/detail/lockpool.hpp:
-
-/usr/include/boost/atomic/detail/link.hpp:
 
 /usr/include/boost/atomic/detail/type-classification.hpp:
 
@@ -4368,21 +4373,21 @@ util.h:
 
 compat.h:
 
-/usr/include/i386-linux-gnu/sys/fcntl.h:
+/usr/include/x86_64-linux-gnu/sys/fcntl.h:
 
-/usr/include/i386-linux-gnu/sys/mman.h:
+/usr/include/x86_64-linux-gnu/sys/mman.h:
 
-/usr/include/i386-linux-gnu/bits/mman.h:
+/usr/include/x86_64-linux-gnu/bits/mman.h:
 
-/usr/include/i386-linux-gnu/bits/mman-linux.h:
+/usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
 /usr/include/ifaddrs.h:
 
 tinyformat.h:
 
-/usr/include/i386-linux-gnu/sys/resource.h:
+/usr/include/x86_64-linux-gnu/sys/resource.h:
 
-/usr/include/i386-linux-gnu/bits/resource.h:
+/usr/include/x86_64-linux-gnu/bits/resource.h:
 
 /usr/include/boost/filesystem/path.hpp:
 
@@ -4488,6 +4493,52 @@ tinyformat.h:
 
 /usr/include/boost/exception/detail/type_info.hpp:
 
+/usr/include/boost/units/detail/utility.hpp:
+
+/usr/include/c++/4.8/cxxabi.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.8/bits/cxxabi_tweaks.h:
+
+/usr/include/boost/algorithm/string/replace.hpp:
+
+/usr/include/boost/algorithm/string/config.hpp:
+
+/usr/include/boost/algorithm/string/find_format.hpp:
+
+/usr/include/boost/range/as_literal.hpp:
+
+/usr/include/boost/range/detail/str_types.hpp:
+
+/usr/include/boost/algorithm/string/concept.hpp:
+
+/usr/include/boost/algorithm/string/detail/find_format.hpp:
+
+/usr/include/boost/algorithm/string/detail/find_format_store.hpp:
+
+/usr/include/boost/algorithm/string/detail/replace_storage.hpp:
+
+/usr/include/boost/algorithm/string/sequence_traits.hpp:
+
+/usr/include/boost/algorithm/string/yes_no_type.hpp:
+
+/usr/include/boost/algorithm/string/detail/sequence.hpp:
+
+/usr/include/boost/algorithm/string/detail/find_format_all.hpp:
+
+/usr/include/boost/algorithm/string/finder.hpp:
+
+/usr/include/boost/algorithm/string/constants.hpp:
+
+/usr/include/boost/algorithm/string/detail/finder.hpp:
+
+/usr/include/boost/algorithm/string/compare.hpp:
+
+/usr/include/boost/algorithm/string/formatter.hpp:
+
+/usr/include/boost/algorithm/string/detail/formatter.hpp:
+
+/usr/include/boost/algorithm/string/detail/util.hpp:
+
 /usr/include/boost/exception/detail/error_info_impl.hpp:
 
 /usr/include/boost/exception/diagnostic_information.hpp:
@@ -4552,6 +4603,8 @@ threadsafety.h:
 
 /usr/include/boost/signals2/slot_base.hpp:
 
+/usr/include/boost/any.hpp:
+
 /usr/include/boost/signals2/detail/foreign_ptr.hpp:
 
 /usr/include/boost/signals2/expired_slot.hpp:
@@ -4595,6 +4648,10 @@ threadsafety.h:
 /usr/include/boost/signals2/detail/auto_buffer.hpp:
 
 /usr/include/boost/multi_index/detail/scope_guard.hpp:
+
+/usr/include/boost/type_traits/has_nothrow_assign.hpp:
+
+/usr/include/boost/type_traits/has_trivial_assign.hpp:
 
 /usr/include/boost/signals2/optional_last_value.hpp:
 

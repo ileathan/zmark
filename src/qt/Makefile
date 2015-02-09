@@ -77,8 +77,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i686-pc-linux-gnu
-host_triplet = i686-pc-linux-gnu
+build_triplet = x86_64-unknown-linux-gnu
+host_triplet = x86_64-unknown-linux-gnu
 DIST_COMMON = $(top_srcdir)/src/Makefile.include $(srcdir)/Makefile.in \
 	$(srcdir)/Makefile.am $(top_srcdir)/src/build-aux/depcomp
 am__append_1 =  \
@@ -149,10 +149,9 @@ am__v_AR_0 = @echo "  AR      " $@;
 am__v_AR_1 = 
 libzmarkqt_a_AR = $(AR) $(ARFLAGS)
 libzmarkqt_a_LIBADD =
-am__libzmarkqt_a_SOURCES_DIST = zmark.cpp \
-	zmarkaddressvalidator.cpp zmarkamountfield.cpp \
-	zmarkgui.cpp zmarkunits.cpp clientmodel.cpp \
-	csvmodelwriter.cpp guiutil.cpp intro.cpp \
+am__libzmarkqt_a_SOURCES_DIST = zmark.cpp zmarkaddressvalidator.cpp \
+	zmarkamountfield.cpp zmarkgui.cpp zmarkunits.cpp \
+	clientmodel.cpp csvmodelwriter.cpp guiutil.cpp intro.cpp \
 	monitoreddatamapper.cpp notificator.cpp optionsdialog.cpp \
 	optionsmodel.cpp qvalidatedlineedit.cpp qvaluecombobox.cpp \
 	rpcconsole.cpp splashscreen.cpp trafficgraphwidget.cpp \
@@ -192,38 +191,29 @@ am__libzmarkqt_a_SOURCES_DIST = zmark.cpp \
 	forms/receiverequestdialog.ui forms/rpcconsole.ui \
 	forms/sendcoinsdialog.ui forms/sendcoinsentry.ui \
 	forms/signverifymessagedialog.ui \
-	forms/transactiondescdialog.ui zmark.qrc \
-	locale/zmark_ach.ts locale/zmark_af_ZA.ts \
-	locale/zmark_ar.ts locale/zmark_be_BY.ts \
-	locale/zmark_bg.ts locale/zmark_bs.ts \
-	locale/zmark_ca_ES.ts locale/zmark_ca.ts \
-	locale/zmark_ca@valencia.ts locale/zmark_cmn.ts \
-	locale/zmark_cs.ts locale/zmark_cy.ts locale/zmark_da.ts \
-	locale/zmark_de.ts locale/zmark_el_GR.ts \
-	locale/zmark_en.ts locale/zmark_eo.ts \
-	locale/zmark_es_CL.ts locale/zmark_es_DO.ts \
-	locale/zmark_es_MX.ts locale/zmark_es.ts \
-	locale/zmark_es_UY.ts locale/zmark_et.ts \
-	locale/zmark_eu_ES.ts locale/zmark_fa_IR.ts \
-	locale/zmark_fa.ts locale/zmark_fi.ts \
-	locale/zmark_fr_CA.ts locale/zmark_fr.ts \
-	locale/zmark_gl.ts locale/zmark_gu_IN.ts \
-	locale/zmark_he.ts locale/zmark_hi_IN.ts \
-	locale/zmark_hr.ts locale/zmark_hu.ts \
-	locale/zmark_id_ID.ts locale/zmark_it.ts \
-	locale/zmark_ja.ts locale/zmark_ka.ts \
-	locale/zmark_kk_KZ.ts locale/zmark_ko_KR.ts \
-	locale/zmark_ky.ts locale/zmark_la.ts locale/zmark_lt.ts \
-	locale/zmark_lv_LV.ts locale/zmark_mn.ts \
-	locale/zmark_ms_MY.ts locale/zmark_nb.ts \
-	locale/zmark_nl.ts locale/zmark_pam.ts \
-	locale/zmark_pl.ts locale/zmark_pt_BR.ts \
-	locale/zmark_pt_PT.ts locale/zmark_ro_RO.ts \
-	locale/zmark_ru.ts locale/zmark_sah.ts \
-	locale/zmark_sk.ts locale/zmark_sl_SI.ts \
-	locale/zmark_sq.ts locale/zmark_sr.ts locale/zmark_sv.ts \
-	locale/zmark_th_TH.ts locale/zmark_tr.ts \
-	locale/zmark_uk.ts locale/zmark_ur_PK.ts \
+	forms/transactiondescdialog.ui zmark.qrc locale/zmark_ach.ts \
+	locale/zmark_af_ZA.ts locale/zmark_ar.ts locale/zmark_be_BY.ts \
+	locale/zmark_bg.ts locale/zmark_bs.ts locale/zmark_ca_ES.ts \
+	locale/zmark_ca.ts locale/zmark_ca@valencia.ts \
+	locale/zmark_cmn.ts locale/zmark_cs.ts locale/zmark_cy.ts \
+	locale/zmark_da.ts locale/zmark_de.ts locale/zmark_el_GR.ts \
+	locale/zmark_en.ts locale/zmark_eo.ts locale/zmark_es_CL.ts \
+	locale/zmark_es_DO.ts locale/zmark_es_MX.ts locale/zmark_es.ts \
+	locale/zmark_es_UY.ts locale/zmark_et.ts locale/zmark_eu_ES.ts \
+	locale/zmark_fa_IR.ts locale/zmark_fa.ts locale/zmark_fi.ts \
+	locale/zmark_fr_CA.ts locale/zmark_fr.ts locale/zmark_gl.ts \
+	locale/zmark_gu_IN.ts locale/zmark_he.ts locale/zmark_hi_IN.ts \
+	locale/zmark_hr.ts locale/zmark_hu.ts locale/zmark_id_ID.ts \
+	locale/zmark_it.ts locale/zmark_ja.ts locale/zmark_ka.ts \
+	locale/zmark_kk_KZ.ts locale/zmark_ko_KR.ts locale/zmark_ky.ts \
+	locale/zmark_la.ts locale/zmark_lt.ts locale/zmark_lv_LV.ts \
+	locale/zmark_mn.ts locale/zmark_ms_MY.ts locale/zmark_nb.ts \
+	locale/zmark_nl.ts locale/zmark_pam.ts locale/zmark_pl.ts \
+	locale/zmark_pt_BR.ts locale/zmark_pt_PT.ts \
+	locale/zmark_ro_RO.ts locale/zmark_ru.ts locale/zmark_sah.ts \
+	locale/zmark_sk.ts locale/zmark_sl_SI.ts locale/zmark_sq.ts \
+	locale/zmark_sr.ts locale/zmark_sv.ts locale/zmark_th_TH.ts \
+	locale/zmark_tr.ts locale/zmark_uk.ts locale/zmark_ur_PK.ts \
 	locale/zmark_uz@Cyrl.ts locale/zmark_vi.ts \
 	locale/zmark_vi_VN.ts locale/zmark_zh_CN.ts \
 	locale/zmark_zh_HK.ts locale/zmark_zh_TW.ts \
@@ -284,8 +274,7 @@ am__objects_2 = libzmarkqt_a-zmark.$(OBJEXT) \
 	libzmarkqt_a-zmarkunits.$(OBJEXT) \
 	libzmarkqt_a-clientmodel.$(OBJEXT) \
 	libzmarkqt_a-csvmodelwriter.$(OBJEXT) \
-	libzmarkqt_a-guiutil.$(OBJEXT) \
-	libzmarkqt_a-intro.$(OBJEXT) \
+	libzmarkqt_a-guiutil.$(OBJEXT) libzmarkqt_a-intro.$(OBJEXT) \
 	libzmarkqt_a-monitoreddatamapper.$(OBJEXT) \
 	libzmarkqt_a-notificator.$(OBJEXT) \
 	libzmarkqt_a-optionsdialog.$(OBJEXT) \
@@ -512,20 +501,20 @@ AUTOHEADER = ${SHELL} /home/leathan/zmark/src/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/leathan/zmark/src/build-aux/missing automake-1.14
 AWK = gawk
 BDB_CPPFLAGS = 
-BDB_LIBS = -ldb_cxx-4.8
+BDB_LIBS = -ldb_cxx
 BOOST_CHRONO_LIB = -lboost_chrono 
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
-BOOST_LDFLAGS = -L/usr/lib/i386-linux-gnu
-BOOST_LIBS = -L/usr/lib/i386-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono 
+BOOST_LDFLAGS = -L/usr/lib/x86_64-linux-gnu
+BOOST_LIBS = -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono 
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
 BOOST_SYSTEM_LIB = -lboost_system
 BOOST_THREAD_LIB = -lboost_thread
 BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
 BREW = 
-BUILD_QT = qt
+BUILD_QT = 
 BUILD_TEST = test
-BUILD_TEST_QT = test
+BUILD_TEST_QT = 
 CC = gcc
 CCACHE = 
 CCDEPMODE = depmode=gcc3
@@ -538,7 +527,7 @@ CLIENT_VERSION_REVISION = 3
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2014
 CPP = gcc -E
-CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 CRYPTO_CFLAGS =  
 CRYPTO_LIBS = -lcrypto  
 CXX = g++
@@ -577,14 +566,14 @@ LIBMEMENV =  $(am__append_3)
 LIBOBJS = 
 LIBS = -lminiupnpc -lminiupnpc -lminiupnpc -lminiupnpc  -lssl -lcrypto   -lcrypto  
 LN_S = ln -s
-LRELEASE = /usr/bin/lrelease-qt4
+LRELEASE = 
 LTLIBOBJS = 
-LUPDATE = /usr/bin/lupdate-qt4
+LUPDATE = 
 MAINT = 
 MAKEINFO = ${SHELL} /home/leathan/zmark/src/build-aux/missing makeinfo
 MAKENSIS = 
 MKDIR_P = /bin/mkdir -p
-MOC = /usr/bin/moc-qt4
+MOC = 
 MOC_DEFS = -DHAVE_CONFIG_H -I$(top_srcdir)/src
 OBJC = gcc
 OBJCDEPMODE = depmode=gcc3
@@ -606,27 +595,27 @@ PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PORT = 
-PROTOBUF_CFLAGS = -pthread  
-PROTOBUF_LIBS = -pthread -lprotobuf -lpthread  
-PROTOC = /usr/bin/protoc
+PROTOBUF_CFLAGS = 
+PROTOBUF_LIBS = 
+PROTOC = 
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
-QR_CFLAGS =  
-QR_LIBS = -lqrencode  
-QT_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork  
-QT_DBUS_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtXml  
-QT_DBUS_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtXml  
-QT_DBUS_LIBS = -lQtDBus -lQtXml -lQtCore  
-QT_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork  
+QR_CFLAGS = 
+QR_LIBS = 
+QT_CFLAGS = 
+QT_DBUS_CFLAGS = 
+QT_DBUS_INCLUDES = 
+QT_DBUS_LIBS = 
+QT_INCLUDES = 
 QT_LDFLAGS = 
-QT_LIBS = -lQtGui -lQtNetwork -lQtCore  
-QT_SELECT = qt4
-QT_TEST_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtTest  
-QT_TEST_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtTest  
-QT_TEST_LIBS = -lQtTest  
+QT_LIBS = 
+QT_SELECT = qt
+QT_TEST_CFLAGS = 
+QT_TEST_INCLUDES = 
+QT_TEST_LIBS = 
 RANLIB = /usr/bin/ranlib
-RCC = /usr/bin/rcc
+RCC = 
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
@@ -634,13 +623,13 @@ SSL_CFLAGS =
 SSL_LIBS = -lssl -lcrypto  
 STRIP = /usr/bin/strip
 TESTDEFS =  -DBOOST_TEST_DYN_LINK
-UIC = /usr/bin/uic-qt4
+UIC = 
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 0.9.3
 WINDOWS_BITS = 
 WINDRES = 
-XGETTEXT = 
+XGETTEXT = /usr/bin/xgettext
 abs_builddir = /home/leathan/zmark/src/qt
 abs_srcdir = /home/leathan/zmark/src/qt
 abs_top_builddir = /home/leathan/zmark
@@ -656,22 +645,22 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = i686-pc-linux-gnu
+build = x86_64-unknown-linux-gnu
 build_alias = 
-build_cpu = i686
+build_cpu = x86_64
 build_os = linux-gnu
-build_vendor = pc
+build_vendor = unknown
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-linux-gnu
+host = x86_64-unknown-linux-gnu
 host_alias = 
-host_cpu = i686
+host_cpu = x86_64
 host_os = linux-gnu
-host_vendor = pc
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -1108,11 +1097,6 @@ distclean-compile:
 include ./$(DEPDIR)/libzmarkqt_a-addressbookpage.Po
 include ./$(DEPDIR)/libzmarkqt_a-addresstablemodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-askpassphrasedialog.Po
-include ./$(DEPDIR)/libzmarkqt_a-zmark.Po
-include ./$(DEPDIR)/libzmarkqt_a-zmarkaddressvalidator.Po
-include ./$(DEPDIR)/libzmarkqt_a-zmarkamountfield.Po
-include ./$(DEPDIR)/libzmarkqt_a-zmarkgui.Po
-include ./$(DEPDIR)/libzmarkqt_a-zmarkunits.Po
 include ./$(DEPDIR)/libzmarkqt_a-clientmodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-coincontroldialog.Po
 include ./$(DEPDIR)/libzmarkqt_a-coincontroltreewidget.Po
@@ -1123,10 +1107,6 @@ include ./$(DEPDIR)/libzmarkqt_a-intro.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_addressbookpage.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_addresstablemodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_askpassphrasedialog.Po
-include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkaddressvalidator.Po
-include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkamountfield.Po
-include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkgui.Po
-include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkunits.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_clientmodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_coincontroldialog.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_coincontroltreewidget.Po
@@ -1163,6 +1143,10 @@ include ./$(DEPDIR)/libzmarkqt_a-moc_utilitydialog.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_walletframe.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_walletmodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-moc_walletview.Po
+include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkaddressvalidator.Po
+include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkamountfield.Po
+include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkgui.Po
+include ./$(DEPDIR)/libzmarkqt_a-moc_zmarkunits.Po
 include ./$(DEPDIR)/libzmarkqt_a-monitoreddatamapper.Po
 include ./$(DEPDIR)/libzmarkqt_a-notificator.Po
 include ./$(DEPDIR)/libzmarkqt_a-openuridialog.Po
@@ -1196,9 +1180,14 @@ include ./$(DEPDIR)/libzmarkqt_a-walletmodel.Po
 include ./$(DEPDIR)/libzmarkqt_a-walletmodeltransaction.Po
 include ./$(DEPDIR)/libzmarkqt_a-walletview.Po
 include ./$(DEPDIR)/libzmarkqt_a-winshutdownmonitor.Po
-include ./$(DEPDIR)/zmark_qt-zmark.Po
+include ./$(DEPDIR)/libzmarkqt_a-zmark.Po
+include ./$(DEPDIR)/libzmarkqt_a-zmarkaddressvalidator.Po
+include ./$(DEPDIR)/libzmarkqt_a-zmarkamountfield.Po
+include ./$(DEPDIR)/libzmarkqt_a-zmarkgui.Po
+include ./$(DEPDIR)/libzmarkqt_a-zmarkunits.Po
 include ./$(DEPDIR)/zmark_qt-macdockiconhandler.Po
 include ./$(DEPDIR)/zmark_qt-macnotificationhandler.Po
+include ./$(DEPDIR)/zmark_qt-zmark.Po
 
 .cc.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\

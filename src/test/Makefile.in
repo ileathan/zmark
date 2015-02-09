@@ -152,14 +152,12 @@ am_test_zmark_OBJECTS = test_zmark-alert_tests.$(OBJEXT) \
 	test_zmark-compress_tests.$(OBJEXT) \
 	test_zmark-DoS_tests.$(OBJEXT) \
 	test_zmark-getarg_tests.$(OBJEXT) \
-	test_zmark-key_tests.$(OBJEXT) \
-	test_zmark-main_tests.$(OBJEXT) \
+	test_zmark-key_tests.$(OBJEXT) test_zmark-main_tests.$(OBJEXT) \
 	test_zmark-miner_tests.$(OBJEXT) \
 	test_zmark-mruset_tests.$(OBJEXT) \
 	test_zmark-multisig_tests.$(OBJEXT) \
 	test_zmark-netbase_tests.$(OBJEXT) \
-	test_zmark-pmt_tests.$(OBJEXT) \
-	test_zmark-rpc_tests.$(OBJEXT) \
+	test_zmark-pmt_tests.$(OBJEXT) test_zmark-rpc_tests.$(OBJEXT) \
 	test_zmark-script_P2SH_tests.$(OBJEXT) \
 	test_zmark-script_tests.$(OBJEXT) \
 	test_zmark-serialize_tests.$(OBJEXT) \

@@ -194,9 +194,8 @@ zmarkd_OBJECTS = $(am_zmarkd_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_2)
 am__DEPENDENCIES_3 = $(am__append_3)
 zmarkd_DEPENDENCIES = libzmark_server.a libzmark_cli.a \
-	libzmark_common.a $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_3) $(am__append_8) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	libzmark_common.a $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+	$(am__append_8) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -514,8 +513,8 @@ LIBBITMARK_WALLET = $(top_builddir)/src/libzmark_wallet.a
 LIBBITMARK_COMMON = $(top_builddir)/src/libzmark_common.a
 LIBBITMARK_CLI = $(top_builddir)/src/libzmark_cli.a
 LIBBITMARKQT = $(top_builddir)/src/qt/libzmarkqt.a
-noinst_LIBRARIES = libzmark_server.a libzmark_common.a \
-	libzmark_cli.a $(am__append_4)
+noinst_LIBRARIES = libzmark_server.a libzmark_common.a libzmark_cli.a \
+	$(am__append_4)
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 # zmark core #
@@ -610,10 +609,10 @@ libzmark_wallet_a_SOURCES = \
   walletdb.cpp \
   $(BITMARK_CORE_H)
 
-libzmark_common_a_SOURCES = base58.cpp allocators.cpp \
-	chainparams.cpp core.cpp hash.cpp key.cpp netbase.cpp \
-	protocol.cpp rpcprotocol.cpp script.cpp scrypt.cpp sync.cpp \
-	util.cpp version.cpp $(BITMARK_CORE_H) $(am__append_7)
+libzmark_common_a_SOURCES = base58.cpp allocators.cpp chainparams.cpp \
+	core.cpp hash.cpp key.cpp netbase.cpp protocol.cpp \
+	rpcprotocol.cpp script.cpp scrypt.cpp sync.cpp util.cpp \
+	version.cpp $(BITMARK_CORE_H) $(am__append_7)
 libzmark_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITMARK_CORE_H)
@@ -622,9 +621,9 @@ nodist_libzmark_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
 # zmarkd binary #
-zmarkd_LDADD = libzmark_server.a libzmark_cli.a \
-	libzmark_common.a $(LIBLEVELDB) $(LIBMEMENV) $(am__append_8) \
-	$(BOOST_LIBS) $(BDB_LIBS)
+zmarkd_LDADD = libzmark_server.a libzmark_cli.a libzmark_common.a \
+	$(LIBLEVELDB) $(LIBMEMENV) $(am__append_8) $(BOOST_LIBS) \
+	$(BDB_LIBS)
 zmarkd_SOURCES = zmarkd.cpp $(am__append_9)
 
 # zmark-cli binary #
@@ -783,8 +782,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/alert.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/allocators.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/base58.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/zmark-cli.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/zmarkd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bloom.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/chainparams.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/checkpoints.Po@am__quote@
@@ -822,6 +819,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/version.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wallet.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/walletdb.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/zmark-cli.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/zmarkd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@compat/$(DEPDIR)/glibc_compat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@compat/$(DEPDIR)/glibcxx_compat.Po@am__quote@
 

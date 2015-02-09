@@ -77,8 +77,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i686-pc-linux-gnu
-host_triplet = i686-pc-linux-gnu
+build_triplet = x86_64-unknown-linux-gnu
+host_triplet = x86_64-unknown-linux-gnu
 DIST_COMMON = $(srcdir)/Makefile.include $(srcdir)/Makefile.in \
 	$(srcdir)/Makefile.am $(srcdir)/zmark-config.h.in \
 	$(top_srcdir)/src/build-aux/depcomp
@@ -194,9 +194,8 @@ zmarkd_OBJECTS = $(am_zmarkd_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_2)
 am__DEPENDENCIES_3 = $(am__append_3)
 zmarkd_DEPENDENCIES = libzmark_server.a libzmark_cli.a \
-	libzmark_common.a $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_3) $(am__append_8) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	libzmark_common.a $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+	$(am__append_8) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -322,20 +321,20 @@ AUTOHEADER = ${SHELL} /home/leathan/zmark/src/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/leathan/zmark/src/build-aux/missing automake-1.14
 AWK = gawk
 BDB_CPPFLAGS = 
-BDB_LIBS = -ldb_cxx-4.8
+BDB_LIBS = -ldb_cxx
 BOOST_CHRONO_LIB = -lboost_chrono 
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
-BOOST_LDFLAGS = -L/usr/lib/i386-linux-gnu
-BOOST_LIBS = -L/usr/lib/i386-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono 
+BOOST_LDFLAGS = -L/usr/lib/x86_64-linux-gnu
+BOOST_LIBS = -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono 
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
 BOOST_SYSTEM_LIB = -lboost_system
 BOOST_THREAD_LIB = -lboost_thread
 BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
 BREW = 
-BUILD_QT = qt
+BUILD_QT = 
 BUILD_TEST = test
-BUILD_TEST_QT = test
+BUILD_TEST_QT = 
 CC = gcc
 CCACHE = 
 CCDEPMODE = depmode=gcc3
@@ -348,7 +347,7 @@ CLIENT_VERSION_REVISION = 3
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2014
 CPP = gcc -E
-CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 CRYPTO_CFLAGS =  
 CRYPTO_LIBS = -lcrypto  
 CXX = g++
@@ -387,14 +386,14 @@ LIBMEMENV =  $(am__append_3)
 LIBOBJS = 
 LIBS = -lminiupnpc -lminiupnpc -lminiupnpc -lminiupnpc  -lssl -lcrypto   -lcrypto  
 LN_S = ln -s
-LRELEASE = /usr/bin/lrelease-qt4
+LRELEASE = 
 LTLIBOBJS = 
-LUPDATE = /usr/bin/lupdate-qt4
+LUPDATE = 
 MAINT = 
 MAKEINFO = ${SHELL} /home/leathan/zmark/src/build-aux/missing makeinfo
 MAKENSIS = 
 MKDIR_P = /bin/mkdir -p
-MOC = /usr/bin/moc-qt4
+MOC = 
 MOC_DEFS = -DHAVE_CONFIG_H -I$(top_srcdir)/src
 OBJC = gcc
 OBJCDEPMODE = depmode=gcc3
@@ -416,27 +415,27 @@ PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PORT = 
-PROTOBUF_CFLAGS = -pthread  
-PROTOBUF_LIBS = -pthread -lprotobuf -lpthread  
-PROTOC = /usr/bin/protoc
+PROTOBUF_CFLAGS = 
+PROTOBUF_LIBS = 
+PROTOC = 
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
-QR_CFLAGS =  
-QR_LIBS = -lqrencode  
-QT_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork  
-QT_DBUS_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtXml  
-QT_DBUS_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtXml  
-QT_DBUS_LIBS = -lQtDBus -lQtXml -lQtCore  
-QT_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork  
+QR_CFLAGS = 
+QR_LIBS = 
+QT_CFLAGS = 
+QT_DBUS_CFLAGS = 
+QT_DBUS_INCLUDES = 
+QT_DBUS_LIBS = 
+QT_INCLUDES = 
 QT_LDFLAGS = 
-QT_LIBS = -lQtGui -lQtNetwork -lQtCore  
-QT_SELECT = qt4
-QT_TEST_CFLAGS = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtTest  
-QT_TEST_INCLUDES = -DQT_SHARED -I/usr/include/qt4 -I/usr/include/qt4/QtTest  
-QT_TEST_LIBS = -lQtTest  
+QT_LIBS = 
+QT_SELECT = qt
+QT_TEST_CFLAGS = 
+QT_TEST_INCLUDES = 
+QT_TEST_LIBS = 
 RANLIB = /usr/bin/ranlib
-RCC = /usr/bin/rcc
+RCC = 
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
@@ -444,13 +443,13 @@ SSL_CFLAGS =
 SSL_LIBS = -lssl -lcrypto  
 STRIP = /usr/bin/strip
 TESTDEFS =  -DBOOST_TEST_DYN_LINK
-UIC = /usr/bin/uic-qt4
+UIC = 
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 0.9.3
 WINDOWS_BITS = 
 WINDRES = 
-XGETTEXT = 
+XGETTEXT = /usr/bin/xgettext
 abs_builddir = /home/leathan/zmark/src
 abs_srcdir = /home/leathan/zmark/src
 abs_top_builddir = /home/leathan/zmark
@@ -466,22 +465,22 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = i686-pc-linux-gnu
+build = x86_64-unknown-linux-gnu
 build_alias = 
-build_cpu = i686
+build_cpu = x86_64
 build_os = linux-gnu
-build_vendor = pc
+build_vendor = unknown
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-linux-gnu
+host = x86_64-unknown-linux-gnu
 host_alias = 
-host_cpu = i686
+host_cpu = x86_64
 host_os = linux-gnu
-host_vendor = pc
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -514,8 +513,8 @@ LIBBITMARK_WALLET = $(top_builddir)/src/libzmark_wallet.a
 LIBBITMARK_COMMON = $(top_builddir)/src/libzmark_common.a
 LIBBITMARK_CLI = $(top_builddir)/src/libzmark_cli.a
 LIBBITMARKQT = $(top_builddir)/src/qt/libzmarkqt.a
-noinst_LIBRARIES = libzmark_server.a libzmark_common.a \
-	libzmark_cli.a $(am__append_4)
+noinst_LIBRARIES = libzmark_server.a libzmark_common.a libzmark_cli.a \
+	$(am__append_4)
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 # zmark core #
@@ -610,10 +609,10 @@ libzmark_wallet_a_SOURCES = \
   walletdb.cpp \
   $(BITMARK_CORE_H)
 
-libzmark_common_a_SOURCES = base58.cpp allocators.cpp \
-	chainparams.cpp core.cpp hash.cpp key.cpp netbase.cpp \
-	protocol.cpp rpcprotocol.cpp script.cpp scrypt.cpp sync.cpp \
-	util.cpp version.cpp $(BITMARK_CORE_H) $(am__append_7)
+libzmark_common_a_SOURCES = base58.cpp allocators.cpp chainparams.cpp \
+	core.cpp hash.cpp key.cpp netbase.cpp protocol.cpp \
+	rpcprotocol.cpp script.cpp scrypt.cpp sync.cpp util.cpp \
+	version.cpp $(BITMARK_CORE_H) $(am__append_7)
 libzmark_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITMARK_CORE_H)
@@ -622,9 +621,9 @@ nodist_libzmark_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
 # zmarkd binary #
-zmarkd_LDADD = libzmark_server.a libzmark_cli.a \
-	libzmark_common.a $(LIBLEVELDB) $(LIBMEMENV) $(am__append_8) \
-	$(BOOST_LIBS) $(BDB_LIBS)
+zmarkd_LDADD = libzmark_server.a libzmark_cli.a libzmark_common.a \
+	$(LIBLEVELDB) $(LIBMEMENV) $(am__append_8) $(BOOST_LIBS) \
+	$(BDB_LIBS)
 zmarkd_SOURCES = zmarkd.cpp $(am__append_9)
 
 # zmark-cli binary #
@@ -783,8 +782,6 @@ include ./$(DEPDIR)/addrman.Po
 include ./$(DEPDIR)/alert.Po
 include ./$(DEPDIR)/allocators.Po
 include ./$(DEPDIR)/base58.Po
-include ./$(DEPDIR)/zmark-cli.Po
-include ./$(DEPDIR)/zmarkd.Po
 include ./$(DEPDIR)/bloom.Po
 include ./$(DEPDIR)/chainparams.Po
 include ./$(DEPDIR)/checkpoints.Po
@@ -822,6 +819,8 @@ include ./$(DEPDIR)/util.Po
 include ./$(DEPDIR)/version.Po
 include ./$(DEPDIR)/wallet.Po
 include ./$(DEPDIR)/walletdb.Po
+include ./$(DEPDIR)/zmark-cli.Po
+include ./$(DEPDIR)/zmarkd.Po
 include compat/$(DEPDIR)/glibc_compat.Po
 include compat/$(DEPDIR)/glibcxx_compat.Po
 

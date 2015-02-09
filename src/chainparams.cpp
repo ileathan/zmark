@@ -117,8 +117,8 @@ public:
         pchMessageStart[2] = 0x09;
         pchMessageStart[3] = 0x07;
         vAlertPubKey = ParseHex("04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a");
-        nDefaultPort = 8388;
-        nRPCPort = 8387;
+        nDefaultPort = 18388;
+        nRPCPort = 18387;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         strDataDir = "testnet3";
 
@@ -132,7 +132,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("seed.zmark.co"));
+        vSeeds.push_back(CDNSSeedData("seed.zmark.org", "zmark.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(130); // u
         base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
