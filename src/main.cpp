@@ -1230,7 +1230,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees)
 static const int64_t nTargetTimespan = 24*60*60; // one day
 static const int64_t nTargetSpacing = 2*60; // two minutes
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
-static const int64_t nTargetTimespanv2 = 6*60*60; // 6 hours
+static const int64_t nTargetTimespanv2 = 12*60*60; // 12 hours
 static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
 static const int64_t nForkHeight = 13680;
 
@@ -1276,10 +1276,10 @@ unsigned int ComputeMinWorkv2(unsigned int nBase, int64_t nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnLimit)
     {
-        // Maximum 141.42135% adjustment...
-        bnResult *= 1.4142135;
-        // ... in best-case exactly 1.4142135-times-normal target time
-        nTime -= nTargetTimespanv2*1.4142135;
+        // Maximum 200% adjustment...
+        bnResult *= 2;
+        // ... in best-case exactly 2-times-normal target time
+        nTime -= nTargetTimespanv2*2;
     }
     if (bnResult > bnLimit)
         bnResult = bnLimit;
@@ -1387,10 +1387,10 @@ unsigned int GetNextWorkRequiredv2(const CBlockIndex* pindexLast, const CBlockHe
     // Limit adjustment step
     int64_t nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
     LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
-    if (nActualTimespan < nTargetTimespanv2/1.4142135)
-        nActualTimespan = nTargetTimespanv2/1.4142135;
-    if (nActualTimespan > nTargetTimespanv2*1.4142135)
-        nActualTimespan = nTargetTimespanv2*1.4142135;
+    if (nActualTimespan < nTargetTimespanv2/2)
+        nActualTimespan = nTargetTimespanv2/2;
+    if (nActualTimespan > nTargetTimespanv2*2)
+        nActualTimespan = nTargetTimespanv2*2;
 
     // Retarget
     CBigNum bnNew;
