@@ -2478,7 +2478,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CDiskBlockPos* dbp)
         nHeight = pindexPrev->nHeight+1;
 
         // Check proof of work
-        if(pblock->nHeight <= nForkHeight) {
+        if(nHeight <= nForkHeight) {
         	fProofIncorrect = block.nBits != GetNextWorkRequired(pindexPrev, &block);
         } else {
         	fProofIncorrect = block.nBits != GetNextWorkRequiredv2(pindexPrev, &block);
@@ -2621,7 +2621,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         CBigNum bnNewBlock;
         bnNewBlock.SetCompact(pblock->nBits);
         CBigNum bnRequired;
-        if(pblock->nHeight <= nForkHeight)
+        if(mapBlockIndex[hash]->nHeight <= nForkHeight)
         {
         	bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
         } else {
