@@ -1230,6 +1230,9 @@ int64_t GetBlockValue(int nHeight, int64_t nFees)
 static const int64_t nTargetTimespan = 24*60*60; // one day
 static const int64_t nTargetSpacing = 2*60; // two minutes
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
+static const int64_t nTargetTimespanv2 = 6*60*60; // 6 hours
+static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
+static const int64_t nForkHeight = 13680;
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1251,6 +1254,32 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
         bnResult *= 4;
         // ... in best-case exactly 4-times-normal target time
         nTime -= nTargetTimespan*4;
+    }
+    if (bnResult > bnLimit)
+        bnResult = bnLimit;
+    return bnResult.GetCompact();
+}
+
+//
+// minimum amount of work that could possibly be required nTime after
+// minimum work required was nBase
+//
+unsigned int ComputeMinWorkv2(unsigned int nBase, int64_t nTime)
+{
+    const CBigNum &bnLimit = Params().ProofOfWorkLimit();
+    // Testnet has min-difficulty blocks
+    // after nTargetSpacing*2 time between blocks:
+    if (TestNet() && nTime > nTargetSpacing*2)
+        return bnLimit.GetCompact();
+
+    CBigNum bnResult;
+    bnResult.SetCompact(nBase);
+    while (nTime > 0 && bnResult < bnLimit)
+    {
+        // Maximum 141.42135% adjustment...
+        bnResult *= 1.4142135;
+        // ... in best-case exactly 1.4142135-times-normal target time
+        nTime -= nTargetTimespanv2*1.4142135;
     }
     if (bnResult > bnLimit)
         bnResult = bnLimit;
@@ -1313,6 +1342,68 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     /// debug print
     LogPrintf("GetNextWorkRequired RETARGET\n");
     LogPrintf("nTargetTimespan = %d    nActualTimespan = %d\n", nTargetTimespan, nActualTimespan);
+    LogPrintf("Before: %08x  %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).getuint256().ToString());
+    LogPrintf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString());
+
+    return bnNew.GetCompact();
+}
+
+unsigned int GetNextWorkRequiredv2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
+{
+    unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
+
+    // Genesis block
+    if (pindexLast == NULL)
+        return nProofOfWorkLimit;
+
+    // Only change once per interval
+    if ((pindexLast->nHeight+1) % nIntervalv2 != 0)
+    {
+        if (TestNet())
+        {
+            // Special difficulty rule for testnet:
+            // If the new block's timestamp is more than 2* 2 minutes
+            // then allow mining of a min-difficulty block.
+            if (pblock->nTime > pindexLast->nTime + nTargetSpacing*2)
+                return nProofOfWorkLimit;
+            else
+            {
+                // Return the last non-special-min-difficulty-rules-block
+                const CBlockIndex* pindex = pindexLast;
+                while (pindex->pprev && pindex->nHeight % nIntervalv2 != 0 && pindex->nBits == nProofOfWorkLimit)
+                    pindex = pindex->pprev;
+                return pindex->nBits;
+            }
+        }
+        return pindexLast->nBits;
+    }
+
+    // Go back by what we want to be a days worth of blocks
+    const CBlockIndex* pindexFirst = pindexLast;
+    for (int i = 0; pindexFirst && i < nIntervalv2-1; i++)
+        pindexFirst = pindexFirst->pprev;
+    assert(pindexFirst);
+
+    // Limit adjustment step
+    int64_t nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
+    LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
+    if (nActualTimespan < nTargetTimespanv2/1.4142135)
+        nActualTimespan = nTargetTimespanv2/1.4142135;
+    if (nActualTimespan > nTargetTimespanv2*1.4142135)
+        nActualTimespan = nTargetTimespanv2*1.4142135;
+
+    // Retarget
+    CBigNum bnNew;
+    bnNew.SetCompact(pindexLast->nBits);
+    bnNew *= nActualTimespan;
+    bnNew /= nTargetTimespanv2;
+
+    if (bnNew > Params().ProofOfWorkLimit())
+        bnNew = Params().ProofOfWorkLimit();
+
+    /// debug print
+    LogPrintf("GetNextWorkRequiredv2 RETARGET\n");
+    LogPrintf("nTargetTimespanv2 = %d    nActualTimespan = %d\n", nTargetTimespanv2, nActualTimespan);
     LogPrintf("Before: %08x  %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).getuint256().ToString());
     LogPrintf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString());
 
@@ -2370,6 +2461,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 bool AcceptBlock(CBlock& block, CValidationState& state, CDiskBlockPos* dbp)
 {
     AssertLockHeld(cs_main);
+    bool fProofIncorrect = false;
     // Check for duplicate
     uint256 hash = block.GetHash();
     if (mapBlockIndex.count(hash))
@@ -2386,9 +2478,14 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CDiskBlockPos* dbp)
         nHeight = pindexPrev->nHeight+1;
 
         // Check proof of work
-        if (block.nBits != GetNextWorkRequired(pindexPrev, &block))
-            return state.DoS(100, error("AcceptBlock() : incorrect proof of work"),
-                             REJECT_INVALID, "bad-diffbits");
+        if(pblock->nHeight <= nForkHeight) {
+        	fProofIncorrect = block.nBits != GetNextWorkRequired(pindexPrev, &block);
+        } else {
+        	fProofIncorrect = block.nBits != GetNextWorkRequiredv2(pindexPrev, &block);
+        }
+		if (fProofIncorrect)
+			return state.DoS(100, error("AcceptBlock() : incorrect proof of work"),
+							 REJECT_INVALID, "bad-diffbits");
 
         // Check timestamp against prev
         if (block.GetBlockTime() <= pindexPrev->GetMedianTimePast())
@@ -2524,7 +2621,12 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         CBigNum bnNewBlock;
         bnNewBlock.SetCompact(pblock->nBits);
         CBigNum bnRequired;
-        bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
+        if(pblock->nHeight <= nForkHeight)
+        {
+        	bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
+        } else {
+        	bnRequired.SetCompact(ComputeMinWorkv2(pcheckpoint->nBits, deltaTime));
+        }
         if (bnNewBlock > bnRequired)
         {
             return state.DoS(100, error("ProcessBlock() : block with too little proof-of-work"),
