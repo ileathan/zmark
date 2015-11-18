@@ -19,6 +19,7 @@
 #include "util.h"
 
 #include <sstream>
+#include <inttypes.h>
 
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
@@ -1942,6 +1943,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // Special case for the genesis block, skipping connection of its transactions
     // (its coinbase is unspendable)
     if (block.GetHash() == Params().HashGenesisBlock()) {
+    	pindex->nCoinsEmitted = block.vtx[0].GetValueOut();
         view.SetBestBlock(pindex->GetBlockHash());
         return true;
     }
@@ -2022,6 +2024,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
         vPos.push_back(std::make_pair(block.GetTxHash(i), pos));
         pos.nTxOffset += ::GetSerializeSize(tx, SER_DISK, CLIENT_VERSION);
     }
+
     int64_t nTime = GetTimeMicros() - nStart;
     if (fBenchmark)
         LogPrintf("- Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin)\n", (unsigned)block.vtx.size(), 0.001 * nTime, 0.001 * nTime / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * nTime / (nInputs-1));
@@ -2066,6 +2069,10 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     if (fTxIndex)
         if (!pblocktree->WriteTxIndex(vPos))
             return state.Abort(_("Failed to write transaction index"));
+
+    // Increment the nCoinsEmitted to include this blocks subsidy
+    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + block.vtx[0].GetValueOut() - nFees;
+    LogPrintf("Total coins emitted: %" PRId64 "\n", pindex->nCoinsEmitted);
 
     // add this block to the view's block chain
     bool ret;

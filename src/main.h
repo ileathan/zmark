@@ -700,6 +700,9 @@ public:
     // height of the entry in the chain. The genesis block has height 0
     int nHeight;
 
+    // track the amount of coins emitted since genesis block, allowing us to determine max block reward
+    int64_t nCoinsEmitted;
+
     // Which # file this block is stored in (blk?????.dat)
     int nFile;
 
@@ -737,6 +740,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
+        nCoinsEmitted = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
@@ -758,6 +762,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
+        nCoinsEmitted = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
