@@ -2044,6 +2044,10 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     if (fJustCheck)
         return true;
 
+    // Increment the nCoinsEmitted to include this blocks subsidy
+    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + block.vtx[0].GetValueOut() - nFees;
+    LogPrintf("Total coins emitted: %" PRId64 "\n", pindex->nCoinsEmitted);
+
     // Write undo information to disk
     if (pindex->GetUndoPos().IsNull() || (pindex->nStatus & BLOCK_VALID_MASK) < BLOCK_VALID_SCRIPTS)
     {
@@ -2069,10 +2073,6 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     if (fTxIndex)
         if (!pblocktree->WriteTxIndex(vPos))
             return state.Abort(_("Failed to write transaction index"));
-
-    // Increment the nCoinsEmitted to include this blocks subsidy
-    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + block.vtx[0].GetValueOut() - nFees;
-    LogPrintf("Total coins emitted: %" PRId64 "\n", pindex->nCoinsEmitted);
 
     // add this block to the view's block chain
     bool ret;
