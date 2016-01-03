@@ -23,7 +23,7 @@ while last_halvings < 18:
         if halvings == 18:
             print("return nFees; // total of {} coins emitted".format(coins_emitted))
         else:
-            print("""if (emitted < {coins_emitted}) {{  // Q {quarterings} H {halvings} height {height}
+            print("""if (emitted < {coins_emitted})  // Q {quarterings} H {halvings} height {height}
     return nFees + {last_coins_emitted};""".format(**locals()))
     last_quarterings = quarterings
     last_halvings = halvings
