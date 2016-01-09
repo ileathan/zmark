@@ -1232,7 +1232,7 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
     CBigNum intScalingFactor = hashes / 12800000;
     // Now determine reward scaling factor based on hashrate time weighted
     // average
-    double scalingFactor = intScalingFactor.getulong() / 100;
+    double scalingFactor = (double)intScalingFactor.getulong() / 100.0;
     // Max of 100% and minimum of 5%
     if (scalingFactor > 1.0)
         scalingFactor = 1.0;
