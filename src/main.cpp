@@ -1216,7 +1216,7 @@ static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
 static const int64_t nTargetTimespanv2 = 12*60*60; // 12 hours
 static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
 static const int64_t nForkHeight = 13680;
-static const int64_t nForkHeightDGW = 14680;
+static const int64_t nForkHeight2 = 19000;
 
 int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
 {
@@ -1235,7 +1235,7 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
         // 5 MH/s
         minimumFullRewardHashrate = 50000;
     } else {
-        forkHeight = nForkHeightDGW;
+        forkHeight = nForkHeight2;
         // 12.8 GH/s
         minimumFullRewardHashrate = 12800000;
     }
@@ -1477,7 +1477,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     if (Params().NetworkID() != CChainParams::TESTNET) {
         if (nHeight <= nForkHeight) {
             work_algo = 0;
-        } else if (nHeight <= nForkHeightDGW) {
+        } else if (nHeight <= nForkHeight2) {
             work_algo = 1;
         } else {
             work_algo = 2;
