@@ -1257,7 +1257,7 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
     // And after the fork we will halve based on how many coins have been
     // emitted
 
-    uint256 emitted = pindexPrev->nCoinsEmitted;
+    uint256 emitted = pindexPrev->nMoneySupply;
 
     // Get average of last 15 hashrates
     CBlockIndex* curr = pindexPrev;
@@ -2066,7 +2066,7 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     // Special case for the genesis block, skipping connection of its transactions
     // (its coinbase is unspendable)
     if (block.GetHash() == Params().HashGenesisBlock()) {
-    	pindex->nCoinsEmitted = block.vtx[0].GetValueOut();
+    	pindex->nMoneySupply = block.vtx[0].GetValueOut();
         view.SetBestBlock(pindex->GetBlockHash());
         return true;
     }
@@ -2167,10 +2167,10 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
     if (fJustCheck)
         return true;
 
-    // Increment the nCoinsEmitted to include this blocks subsidy
+    // Increment the nMoneySupply to include this blocks subsidy
     int64_t blockValue = block.vtx[0].GetValueOut() - nFees;
-    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + blockValue;
-    LogPrintf("Total coins emitted: %s. Block Value: %s\n", pindex->nCoinsEmitted, blockValue);
+    pindex->nMoneySupply = pindex->pprev->nMoneySupply + blockValue;
+    LogPrintf("Total coins emitted: %s. Block Value: %s\n", pindex->nMoneySupply, blockValue);
 
     // Write undo information to disk
     if (pindex->GetUndoPos().IsNull() || (pindex->nStatus & BLOCK_VALID_MASK) < BLOCK_VALID_SCRIPTS)

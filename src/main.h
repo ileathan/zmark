@@ -701,7 +701,7 @@ public:
     int nHeight;
 
     // track the amount of coins emitted since genesis block, allowing us to determine max block reward
-    int64_t nCoinsEmitted;
+    int64_t nMoneySupply;
 
     // Which # file this block is stored in (blk?????.dat)
     int nFile;
@@ -740,7 +740,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
-        nCoinsEmitted = 0;
+        nMoneySupply = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
@@ -762,7 +762,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
-        nCoinsEmitted = 0;
+        nMoneySupply = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
@@ -895,7 +895,7 @@ public:
             READWRITE(VARINT(nVersion));
 
         READWRITE(VARINT(nHeight));
-        READWRITE(nCoinsEmitted);
+        READWRITE(nMoneySupply);
         READWRITE(VARINT(nStatus));
         READWRITE(VARINT(nTx));
         if (nStatus & (BLOCK_HAVE_DATA | BLOCK_HAVE_UNDO))
