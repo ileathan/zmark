@@ -19,7 +19,6 @@
 #include "util.h"
 
 #include <sstream>
-#include <inttypes.h>
 
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
@@ -1215,7 +1214,7 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
 {
     uint256 emitted = pindexPrev->nCoinsEmitted;
 
-    // Get average of last 15 difficulties
+    // Get average of last 15 hashrates
     CBlockIndex* curr = pindexPrev;
     CBigNum hashes = 0;
     int timePast = curr->GetBlockTime();
@@ -2132,8 +2131,9 @@ bool ConnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex, C
         return true;
 
     // Increment the nCoinsEmitted to include this blocks subsidy
-    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + block.vtx[0].GetValueOut() - nFees;
-    LogPrintf("Total coins emitted: %" PRId64 "\n", pindex->nCoinsEmitted);
+    int64_t blockValue = block.vtx[0].GetValueOut() - nFees;
+    pindex->nCoinsEmitted = pindex->pprev->nCoinsEmitted + blockValue;
+    LogPrintf("Total coins emitted: %s. Block Value: %s\n", pindex->nCoinsEmitted, blockValue);
 
     // Write undo information to disk
     if (pindex->GetUndoPos().IsNull() || (pindex->nStatus & BLOCK_VALID_MASK) < BLOCK_VALID_SCRIPTS)
