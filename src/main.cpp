@@ -1210,8 +1210,53 @@ void static PruneOrphanBlocks()
     mapOrphanBlocks.erase(hash);
 }
 
+static const int64_t nTargetTimespan = 24*60*60; // one day
+static const int64_t nTargetSpacing = 2*60; // two minutes
+static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
+static const int64_t nTargetTimespanv2 = 12*60*60; // 12 hours
+static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
+static const int64_t nForkHeight = 13680;
+static const int64_t nForkHeightDGW = 14680;
+
 int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
 {
+    // Before the fork we'll use the old halving code. Set a low fork number
+    // for testnet
+    int64_t forkHeight;
+    int nHeight = pindexPrev->nHeight;
+    // This number must be 100 times less than the actual full reward hashrate
+    // because we use it to divide a potentially really large number, the
+    // average hashrate. This number can overflow a 32-bit int, so we use
+    // truncated integer division to get it within a 32 bit integer from 1-100
+    // and then convert it into a float for multiplication
+    int minimumFullRewardHashrate;
+    if (TestNet()) {
+        forkHeight = 15;
+        // 5 MH/s
+        minimumFullRewardHashrate = 50000;
+    } else {
+        forkHeight = nForkHeightDGW;
+        // 12.8 GH/s
+        minimumFullRewardHashrate = 12800000;
+    }
+    if (nHeight <= forkHeight) {
+        int64_t nHalfReward = 10 * COIN;
+        int64_t nSubsidy = 0;
+        int halvings = nHeight / Params().SubsidyHalvingInterval();
+
+        // Force block reward to zero after reward would drop below 0.1 marks.
+        if (halvings >= 18)
+            return nFees;
+
+        // Subsidy is cut in half every 788,000 blocks which will occur approximately every 3 years.
+        // Subsidy has an interim reduction every 394,000 blocks (18 months)
+        nSubsidy = (nHalfReward>>halvings) + (nHalfReward>>((nHeight+Params().SubsidyInterimInterval())/Params().SubsidyHalvingInterval()));
+
+        return nSubsidy + nFees;
+    }
+    // And after the fork we will halve based on how many coins have been
+    // emitted
+
     uint256 emitted = pindexPrev->nCoinsEmitted;
 
     // Get average of last 15 hashrates
@@ -1229,7 +1274,7 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
     // Hardcoded 12.8 GH/s threshold for full reward. It's actually 12.8 GH/s /
     // 100 since the result is an integer. We then convert the int to a float
     // since these numbers will be really large.
-    CBigNum intScalingFactor = hashes / 12800000;
+    CBigNum intScalingFactor = hashes / minimumFullRewardHashrate;
     // Now determine reward scaling factor based on hashrate time weighted
     // average
     double scalingFactor = (double)intScalingFactor.getulong() / 100.0;
@@ -1313,14 +1358,6 @@ int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees)
         return nFees + (15258 * scalingFactor);
     return nFees; // total of 2757989473108000 coins emitted
 }
-
-static const int64_t nTargetTimespan = 24*60*60; // one day
-static const int64_t nTargetSpacing = 2*60; // two minutes
-static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
-static const int64_t nTargetTimespanv2 = 12*60*60; // 12 hours
-static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
-static const int64_t nForkHeight = 13680;
-static const int64_t nForkHeightDGW = 14680;
 
 //
 // minimum amount of work that could possibly be required nTime after
