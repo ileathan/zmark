@@ -1503,7 +1503,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         }
     }
 
-    LogPrintf("Running work algo %i at height %i\n", work_algo, nHeight, nForkHeight2);
+    LogPrintf("Running work algo %i at height %i\n", work_algo, nHeight);
 
     // Default Bitcoin style retargeting
 	if (work_algo == 0)
