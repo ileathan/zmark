@@ -1217,6 +1217,7 @@ static const int64_t nTargetTimespanv2 = 12*60*60; // 12 hours
 static const int64_t nIntervalv2 = nTargetTimespanv2 / nTargetSpacing;
 static const int64_t nForkHeight = 13680;
 static const int64_t nForkHeight2 = 19000;
+static const int64_t nForkHeight3 = 58100;
 
 int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees, bool scale)
 {
@@ -1479,14 +1480,14 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast) {
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    bool work_algo = 0;
+    int work_algo = 0;
     int nHeight = pindexLast->nHeight;
 
     // Mainnet
     if (Params().NetworkID() != CChainParams::TESTNET) {
         if (nHeight <= nForkHeight) {
             work_algo = 0;
-        } else if (nHeight <= nForkHeight2) {
+        } else if (nHeight <= nForkHeight3) {
             work_algo = 1;
         } else {
             work_algo = 2;
@@ -1501,6 +1502,8 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
             work_algo = 2;
         }
     }
+
+    LogPrintf("Running work algo %i at height %i\n", work_algo, nHeight, nForkHeight2);
 
     // Default Bitcoin style retargeting
 	if (work_algo == 0)
