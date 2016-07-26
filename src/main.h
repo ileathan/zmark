@@ -56,7 +56,7 @@ static const unsigned int BLOCKFILE_CHUNK_SIZE = 0x1000000; // 16 MiB
 /** The pre-allocation chunk size for rev?????.dat files (since 0.8) */
 static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 720;
+static const int COINBASE_MATURITY = 1;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
@@ -170,7 +170,7 @@ std::string GetWarnings(std::string strFor);
 bool GetTransaction(const uint256 &hash, CTransaction &tx, uint256 &hashBlock, bool fAllowSlow = false);
 /** Find the best known block, and make it the tip of the block chain */
 bool ActivateBestChain(CValidationState &state);
-int64_t GetBlockValue(int nHeight, int64_t nFees);
+int64_t GetBlockValue(CBlockIndex* pindexPrev, int64_t nFees, bool scale = true);
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock);
 unsigned int GetNextWorkRequiredv2(const CBlockIndex* pindexLast, const CBlockHeader *pblock);
 
@@ -700,6 +700,9 @@ public:
     // height of the entry in the chain. The genesis block has height 0
     int nHeight;
 
+    // track the amount of coins emitted since genesis block, allowing us to determine max block reward
+    int64_t nMoneySupply;
+
     // Which # file this block is stored in (blk?????.dat)
     int nFile;
 
@@ -737,6 +740,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
+        nMoneySupply = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
@@ -758,6 +762,7 @@ public:
         phashBlock = NULL;
         pprev = NULL;
         nHeight = 0;
+        nMoneySupply = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
@@ -890,6 +895,7 @@ public:
             READWRITE(VARINT(nVersion));
 
         READWRITE(VARINT(nHeight));
+        READWRITE(nMoneySupply);
         READWRITE(VARINT(nStatus));
         READWRITE(VARINT(nTx));
         if (nStatus & (BLOCK_HAVE_DATA | BLOCK_HAVE_UNDO))
