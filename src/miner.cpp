@@ -328,11 +328,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
         // Fill in header
         pblock->hashPrevBlock  = pindexPrev->GetBlockHash();
         UpdateTime(*pblock, pindexPrev);
-        if(pindexPrev->nHeight + 1 <= 13680) {
-        	pblock->nBits          = GetNextWorkRequired(pindexPrev, pblock);
-        } else {
-        	pblock->nBits          = GetNextWorkRequiredv2(pindexPrev, pblock);
-        }
+        pblock->nBits          = GetNextWorkRequired(pindexPrev, pblock);
         pblock->nNonce         = 0;
         pblock->vtx[0].vin[0].scriptSig = CScript() << OP_0 << OP_0;
         pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
